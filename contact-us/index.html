@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Mahalu Spa — Wellness & Retreat</title>
+
+    <!-- SEO BEST PRACTICE: Meta Deskripsi Khusus Halaman Contact -->
+    <meta
+      name="description"
+      content="Hubungi Mahalu Spa & Wellness. Temukan lokasi cabang kami di Depok dan jadwalkan sesi perawatan relaksasi Anda hari ini."
+    />
+    <meta
+      name="keywords"
+      content="Kontak Mahalu Spa, Lokasi Mahalu Spa, Cabang Mahalu Spa, Spa Terdekat Depok, Alamat Mahalu Spa"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://spa.mahalu.group/contact-us/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Mahalu Spa" />
+    <meta
+      property="og:description"
+      content="Temukan lokasi Mahalu Spa dan hubungi kami untuk reservasi perawatan relaksasi Anda."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spa.mahalu.group/contact-us/" />
+    <meta
+      property="og:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Color Palette */
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+
+        /* Typography */
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      /* Custom Text Selection */
+      ::selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+      ::-moz-selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Scroll Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Image Zoom Animation for Hero */
+      .img-zoom {
+        transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .group:hover .img-zoom {
+        transform: scale(1.05);
+      }
+
+      .nav-link-modern {
+        color: white;
+        position: relative;
+        transition: 0.3s;
+
+        /* 🔥 ini penyelamat */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-link-modern:hover {
+        color: var(--accent);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- STRUCTURED DATA (LOCAL SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Mahalu Spa & Wellness",
+        "image": "https://spa.mahalu.group/assets/img/17.jpg",
+        "url": "https://spa.mahalu.group/contact-us",
+        "telephone": "+62896-0909-5700",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Raya Abdul Gani No.48, RT.006/RW.001, Kalibaru",
+          "addressLocality": "Kecamatan Cilodong, Kota Depok",
+          "addressRegion": "Jawa Barat",
+          "postalCode": "16414",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.43717,
+          "longitude": 106.83191
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/mahaluspa",
+          "https://maps.google.com/?q=Mahalu+Spa+Depok"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-bg relative">
+    <!-- HEADER INJECTION POINT -->
+    <div id="header-container"></div>
+
+    <main class="w-full">
+      <!-- HERO SECTION WITH BACKGROUND IMAGE (Clean Separation) -->
+      <section
+        class="relative w-full h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden z-10 group"
+      >
+        <!-- Background Image -->
+        <img
+          src="/assets/img/17.jpg"
+          alt="Mahalu Spa Contact Ambience"
+          class="absolute inset-0 w-full h-full object-cover origin-center object-[center_65%] opacity-90 img-zoom"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000&auto=format&fit=crop'
+          "
+        />
+        <div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+        ></div>
+
+        <!-- Hero Content -->
+        <div
+          class="relative z-20 w-full max-w-[1000px] mx-auto px-6 text-center mt-16 md:mt-24 reveal active"
+        >
+          <div class="flex flex-col items-center">
+            <span
+              class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-4 mb-6"
+            >
+              <span class="w-10 h-[1px] bg-accent"></span> Let's Connect
+              <span class="w-10 h-[1px] bg-accent"></span>
+            </span>
+            <h1
+              class="font-head text-5xl md:text-7xl lg:text-[85px] text-bg leading-[1.05] drop-shadow-lg mb-6"
+            >
+              Get In Touch
+            </h1>
+            <p
+              class="font-body text-[#fff4ed]/75 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed"
+            >
+              Kami selalu siap <span class="text-accent">melayani </span> Anda.
+              Baik untuk reservasi, pertanyaan, maupun merencanakan pengalaman
+              relaksasi khusus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUSINESS INFORMATION SECTION (NAP - Name, Address, Phone) -->
+      <section
+        class="w-full px-6 md:px-12 py-16 md:py-20 relative z-20 bg-bg reveal"
+      >
+        <div class="max-w-[1400px] mx-auto">
+          <div
+            class="bg-accent/5 border border-accent/10 rounded-2xl p-8 md:p-10"
+          >
+            <h2 class="font-head text-2xl md:text-3xl text-text mb-8">
+              Informasi Lengkap Mahalu Spa
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Business Name -->
+              <div>
+                <span
+                  class="font-body font-semibold text-muted text-xs uppercase tracking-widest block mb-2"
+                  >Nama Bisnis</span
+                >
+                <p class="font-head text-xl text-text">
+                  Mahalu Spa, Nail Art & Eyelash
+                </p>
+              </div>
+              <!-- Complete Address -->
+              <div>
+                <span
+                  class="font-body font-semibold text-muted text-xs uppercase tracking-widest block mb-2"
+                  >Alamat Lengkap</span
+                >
+                <address class="not-italic font-body text-text leading-relaxed">
+                  Jl. Raya Abdul Gani No.48<br />
+                  RT.006/RW.001, Kalibaru<br />
+                  Kec. Cilodong, Kota Depok<br />
+                  Jawa Barat 16414, Indonesia
+                </address>
+              </div>
+              <!-- Phone Contact -->
+              <div>
+                <span
+                  class="font-body font-semibold text-muted text-xs uppercase tracking-widest block mb-2"
+                  >Hubungi Kami</span
+                >
+                <div class="flex flex-col gap-2">
+                  <a
+                    href="tel:+6289609095700"
+                    class="font-body text-text font-medium hover:text-accent transition-colors"
+                    >📞 +62 896-0909-5700</a
+                  >
+                  <a
+                    href="https://wa.me/6289609095700"
+                    target="_blank"
+                    class="font-body text-text font-medium hover:text-accent transition-colors"
+                    >💬 WhatsApp</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITORIAL LOCATIONS SECTION (No Cards, Clean Directory Layout) -->
+      <section class="w-full px-6 md:px-12 py-24 md:py-32 relative z-20 bg-bg">
+        <div class="max-w-[1400px] mx-auto">
+          <!-- <div class="text-center mb-16 reveal">
+            <span
+              class="font-subhead italic text-muted tracking-[0.15em] uppercase text-xs mb-3 block"
+              >Visit Us</span
+            >
+            <h2 class="font-head text-4xl md:text-5xl text-text">
+              Our Locations
+            </h2>
+          </div> -->
+
+          <!-- Typography-driven Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-y border-muted/20 py-12 md:py-16 reveal"
+            style="transition-delay: 150ms"
+          >
+            <!-- Jakarta (Inactive) -->
+            <div
+              class="flex flex-col items-center justify-center text-center p-8 lg:border-r border-muted/20 opacity-60"
+            >
+              <span
+                class="font-body font-semibold text-[10px] uppercase tracking-[0.2em] text-muted mb-4 block"
+                >Coming Soon</span
+              >
+              <h3 class="font-head text-3xl text-text mb-4">Jakarta</h3>
+              <div class="w-8 h-[1px] bg-muted/40 mt-2"></div>
+            </div>
+
+            <!-- Depok (Active Highlighted) -->
+            <div
+              class="flex flex-col items-center justify-center text-center p-8 lg:border-r border-muted/20 relative"
+            >
+              <span
+                class="font-body font-bold text-[10px] uppercase tracking-[0.2em] text-accent mb-4 block flex items-center gap-2"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
+                ></span>
+                Active
+              </span>
+              <h3 class="font-head text-3xl md:text-4xl text-text mb-6">
+                Depok
+              </h3>
+              <address
+                class="not-italic font-body font-light text-text/80 text-sm md:text-base leading-relaxed"
+              >
+                Jl. Abdul Gani Raya No.48<br />
+                Kalibaru, Cilodong<br />
+                Jawa Barat 16414
+              </address>
+            </div>
+
+            <!-- Yogya (Inactive) -->
+            <div
+              class="flex flex-col items-center justify-center text-center p-8 lg:border-r border-muted/20 opacity-60"
+            >
+              <span
+                class="font-body font-semibold text-[10px] uppercase tracking-[0.2em] text-muted mb-4 block"
+                >Coming Soon</span
+              >
+              <h3 class="font-head text-3xl text-text mb-4">Yogyakarta</h3>
+              <div class="w-8 h-[1px] bg-muted/40 mt-2"></div>
+            </div>
+
+            <!-- Bali (Inactive) -->
+            <div
+              class="flex flex-col items-center justify-center text-center p-8 opacity-60"
+            >
+              <span
+                class="font-body font-semibold text-[10px] uppercase tracking-[0.2em] text-muted mb-4 block"
+                >Coming Soon</span
+              >
+              <h3 class="font-head text-3xl text-text mb-4">Bali</h3>
+              <div class="w-8 h-[1px] bg-muted/40 mt-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODERN SPLIT BENTO LAYOUT (Contact Info + Contained Map) -->
+      <section class="w-full pb-32 px-6 md:px-12 bg-bg relative z-10">
+        <div
+          class="max-w-[1400px] mx-auto bg-white rounded-[2.5rem] md:rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.03)] border border-muted/5 overflow-hidden flex flex-col lg:flex-row reveal"
+        >
+          <!-- Left Column: Direct Contact Details -->
+          <div
+            class="w-full lg:w-[40%] p-8 md:p-16 flex flex-col justify-center bg-white z-20"
+          >
+            <span
+              class="font-subhead italic text-accent tracking-[0.15em] uppercase text-xs mb-4"
+              >Direct Contact</span
+            >
+            <h2
+              class="font-head text-4xl md:text-5xl text-text mb-10 leading-tight"
+            >
+              We are here <br />
+              for you.
+            </h2>
+
+            <div class="flex flex-col gap-8">
+              <!-- Phone -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-bg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-bg transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-subhead italic text-muted text-sm mb-1"
+                    >Phone / WhatsApp</span
+                  >
+                  <a
+                    href="tel:+6289609095700"
+                    class="font-body text-text font-medium text-lg hover:text-accent transition-colors"
+                    >+62 896-0909-5700</a
+                  >
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-bg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-bg transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-subhead italic text-muted text-sm mb-1"
+                    >Email Inquiry</span
+                  >
+                  <a
+                    href="mailto:info@mahalu.group"
+                    class="font-body text-text font-medium text-lg hover:text-accent transition-colors break-all"
+                    >info@mahalu.group</a
+                  >
+                </div>
+              </div>
+
+              <!-- Operating Hours -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="w-12 h-12 shrink-0 rounded-full bg-bg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-bg transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-subhead italic text-muted text-sm mb-1"
+                    >Opening Hours</span
+                  >
+                  <span class="font-body text-text font-medium text-lg"
+                    >Mon - Sun: 10.00 - 20.00</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Satellite Map Container -->
+          <div
+            class="w-full lg:w-[60%] h-[400px] lg:h-auto min-h-[500px] relative bg-muted/10 p-3 md:p-6 lg:p-8"
+          >
+            <div
+              class="w-full h-full relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-inner group"
+            >
+              <!-- Parameter pb telah diubah menjadi !5e1 untuk memanggil SATELLITE VIEW secara otomatis -->
+              <iframe
+                class="w-full h-full border-0 transition-transform duration-700 group-hover:scale-105"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.664074817094!2d106.83191117194121!3d-6.437172593554015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf7c485fefa3eca3%3A0x662cf47c4f275937!2sMahalu%20Spa%2C%20Nail%20Art%20%26%20Eyelash!5e1!3m2!1sid!2sid!4v1765785575276!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <!-- Floating Button on the map -->
+              <div
+                class="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-10"
+              >
+                <a
+                  href="https://maps.google.com/?q=Mahalu+Spa+Depok"
+                  target="_blank"
+                  class="group/btn inline-flex items-center gap-2 bg-text text-bg px-6 py-3 rounded-full font-body font-medium tracking-wide text-xs md:text-sm hover:bg-accent hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)] transition-all duration-300"
+                >
+                  Get Directions
+                  <svg
+                    class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER INJECTION POINT -->
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+
+    <script>
+      // Asynchronous Function agar loading Komponen berjalan pararel
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // 1. IMPORT COMPONENTS (Header & Footer)
+
+          // 2. JALANKAN ANIMASI SCROLL REVEAL
+          initScrollReveal();
+        } catch (error) {
+          console.error("Gagal memuat komponen:", error);
+        }
+      });
+
+      // --- FUNGSI SCROLL REVEAL ---
+      function initScrollReveal() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        document.querySelectorAll(".reveal").forEach((el) => {
+          observer.observe(el);
+        });
+      }
+    </script>
+  </body>
+</html>

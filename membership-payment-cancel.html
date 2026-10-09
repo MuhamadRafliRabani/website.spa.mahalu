@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/logo/favicon-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/logo/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/logo/apple-touch-icon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran Membership — Mahalu Spa</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#b26632" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#fff4ed",
+              accent: "#b26632",
+              muted: "#907e70",
+              dark: "#893e1e",
+              text: "#3b2a23",
+            },
+            fontFamily: {
+              head: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-body: "Inter", sans-serif;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: none;
+      }
+      .pop-in {
+        animation: pop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(0.7);
+          opacity: 0;
+        }
+        70% {
+          transform: scale(1.08);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .font-head {
+        font-family: var(--font-head);
+      }
+      .font-body {
+        font-family: var(--font-body);
+      }
+      .bg-page {
+        background: var(--bg);
+      }
+      .text-main {
+        color: var(--text);
+      }
+      .text-muted {
+        color: var(--muted);
+      }
+      .text-accent {
+        color: var(--accent);
+      }
+      .bg-accent {
+        background: var(--accent);
+      }
+      .button-primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .button-primary:hover {
+        background: var(--dark);
+      }
+      .is-hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-page">
+    <div id="header-container"></div>
+    <main
+      class="min-h-screen flex items-center justify-center px-5 py-20 sm:py-28"
+    >
+      <section id="card" class="reveal w-full max-w-xl">
+        <div class="text-center mb-7">
+          <div
+            class="pop-in mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#907e70]/10 text-[#907e70]"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </div>
+          <p
+            class="text-accent text-[10px] font-bold uppercase tracking-[0.16em] mb-2"
+          >
+            Mahalu Membership
+          </p>
+          <h1
+            id="page-title"
+            class="font-head text-3xl sm:text-4xl text-main mb-3"
+          >
+            Pembayaran Belum Selesai
+          </h1>
+          <p
+            id="page-description"
+            class="font-body text-muted text-sm sm:text-[15px] leading-relaxed max-w-md mx-auto"
+          >
+            Proses pembayaran membership belum selesai. Membership tidak
+            dibatalkan dan belum dapat digunakan sampai pembayaran diterima.
+          </p>
+        </div>
+        <div
+          class="bg-white rounded-2xl border border-[#b26632]/20 p-5 sm:p-6 shadow-[0_18px_50px_rgba(43,28,20,.07)]"
+        >
+          <div
+            id="reference-row"
+            class="is-hidden mb-4 rounded-xl bg-[#fff8f2] px-4 py-3"
+          >
+            <p
+              class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+            >
+              Referensi pembayaran
+            </p>
+            <p
+              id="reference-value"
+              class="font-head text-sm font-semibold text-accent break-all"
+            ></p>
+          </div>
+          <form id="verify-form" class="space-y-3">
+            <label for="phone" class="block text-xs font-semibold text-main"
+              >Nomor WhatsApp pembelian</label
+            >
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                required
+                class="min-w-0 flex-1 rounded-xl border border-[#e6d8ce] bg-white px-4 py-3 text-sm outline-none focus:border-[#b26632] focus:ring-2 focus:ring-[#b26632]/10"
+                placeholder="Contoh: 0812…"
+              />
+              <button
+                id="verify-button"
+                class="button-primary rounded-xl px-5 py-3 text-sm font-semibold transition-colors disabled:opacity-50"
+                type="submit"
+              >
+                Periksa pembayaran
+              </button>
+            </div>
+            <p class="text-[11px] leading-relaxed text-muted">
+              Gunakan nomor yang sama saat membeli. Nomor tidak ditambahkan ke
+              alamat halaman.
+            </p>
+          </form>
+          <div
+            id="feedback"
+            class="is-hidden mt-4 rounded-xl border px-4 py-3 text-sm"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div
+            id="summary"
+            class="is-hidden mt-5 border-t border-[#f0e7e0] pt-5"
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+                >
+                  Atas nama
+                </p>
+                <p
+                  id="customer-name"
+                  class="text-sm font-semibold text-main"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+                >
+                  Paket
+                </p>
+                <p
+                  id="package-name"
+                  class="text-sm font-semibold text-main"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+                >
+                  Total
+                </p>
+                <p
+                  id="package-price"
+                  class="text-sm font-semibold text-main"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+                >
+                  Status pembayaran
+                </p>
+                <p
+                  id="payment-status"
+                  class="text-sm font-semibold text-main"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted mb-1"
+                >
+                  Masa membership
+                </p>
+                <p id="validity" class="text-sm font-semibold text-main"></p>
+              </div>
+            </div>
+            <a
+              id="retry-payment"
+              class="is-hidden button-primary mt-5 w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-colors"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lanjutkan pembayaran</a
+            >
+          </div>
+        </div>
+        <div class="mt-5 flex justify-center">
+          <a
+            href="/"
+            class="text-sm font-semibold text-accent hover:text-[#893e1e]"
+            >Kembali ke Beranda</a
+          >
+        </div>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script>
+      window.MAHALU_BOOKING_CONFIG = window.MAHALU_BOOKING_CONFIG || {
+        apiBase: "https://ads.langitlangit.id/backend/api",
+      };
+      (function () {
+        var apiBase = (
+          window.MAHALU_BOOKING_CONFIG.apiBase ||
+          "https://bms-api.mahalu.group/api"
+        ).replace(/\/$/, "");
+        var referenceId =
+          new URLSearchParams(window.location.search).get("payment_ref") || "";
+        var form = document.getElementById("verify-form");
+        var input = document.getElementById("phone");
+        var button = document.getElementById("verify-button");
+        var feedback = document.getElementById("feedback");
+        var idr = function (value) {
+          return "Rp\u00a0" + Number(value || 0).toLocaleString("id-ID");
+        };
+        var dateLabel = function (value) {
+          if (!value) return "Belum ditentukan";
+          var date = new Date(value + "T00:00:00");
+          return isNaN(date.getTime())
+            ? value
+            : date.toLocaleDateString("id-ID", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              });
+        };
+        function show(message, type) {
+          feedback.textContent = message;
+          feedback.className =
+            "mt-4 rounded-xl border px-4 py-3 text-sm " +
+            (type === "success"
+              ? "border-green-200 bg-green-50 text-green-800"
+              : type === "pending"
+                ? "border-[#ead7c8] bg-[#fff8f2] text-[#74451f]"
+                : "border-red-200 bg-red-50 text-red-700");
+        }
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (!referenceId) {
+            show(
+              "Referensi pembayaran tidak ada. Buka kembali tautan dari payment gateway.",
+              "error",
+            );
+            return;
+          }
+          button.disabled = true;
+          button.textContent = "Memeriksa…";
+          fetch(
+            apiBase +
+              "/public/membership-payments/" +
+              encodeURIComponent(referenceId) +
+              "/status",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "ngrok-skip-browser-warning": "true",
+              },
+              body: JSON.stringify({ phone: input.value.trim() }),
+            },
+          )
+            .then(function (response) {
+              return response.json().then(function (body) {
+                if (!response.ok)
+                  throw new Error(
+                    body.message || "Data pembayaran tidak dapat diverifikasi.",
+                  );
+                return body;
+              });
+            })
+            .then(function (response) {
+              var data = response.data || {};
+              var payment = data.payment || {};
+              var membership = data.membership || {};
+              var packageData = data.package || {};
+              document.getElementById("customer-name").textContent =
+                (data.customer && data.customer.name) || "Customer";
+              document
+                .getElementById("reference-row")
+                .classList.remove("is-hidden");
+              document.getElementById("reference-value").textContent =
+                data.reference_id || referenceId;
+              document.getElementById("package-name").textContent =
+                packageData.name || "Membership";
+              document.getElementById("package-price").textContent = idr(
+                payment.amount || packageData.price,
+              );
+              document.getElementById("payment-status").textContent =
+                payment.paid ? "Lunas" : payment.status || "Menunggu";
+              document.getElementById("validity").textContent =
+                dateLabel(membership.start_date) +
+                " - " +
+                dateLabel(membership.end_date);
+              document.getElementById("summary").classList.remove("is-hidden");
+              if (payment.paid) {
+                show(
+                  "Pembayaran sudah diterima. Lihat status, masa berlaku, dan sisa kuota di bawah.",
+                  "success",
+                );
+                document.getElementById("page-title").textContent =
+                  "Pembayaran Diterima";
+                document.getElementById("page-description").textContent =
+                  "Gateway sudah mengonfirmasi pembayaran. Rincian membership Anda ditampilkan di bawah.";
+                document
+                  .getElementById("retry-payment")
+                  .classList.add("is-hidden");
+                document.getElementById("retry-payment").style.display = "";
+              } else if (data.payment_url) {
+                show(
+                  "Pembayaran belum selesai. Membership belum dapat digunakan; Anda masih bisa melanjutkan pembayaran.",
+                  "pending",
+                );
+                document.getElementById("retry-payment").href =
+                  data.payment_url;
+                document
+                  .getElementById("retry-payment")
+                  .classList.remove("is-hidden");
+                document.getElementById("retry-payment").style.display = "flex";
+              } else {
+                show(
+                  "Pembayaran belum selesai atau tautannya sudah tidak berlaku. Hubungi kami untuk bantuan.",
+                  "pending",
+                );
+                document
+                  .getElementById("retry-payment")
+                  .classList.add("is-hidden");
+                document.getElementById("retry-payment").style.display = "";
+              }
+              button.disabled = false;
+              button.textContent = "Periksa lagi";
+            })
+            .catch(function (error) {
+              show(
+                error.message ||
+                  "Status belum dapat dimuat. Periksa nomor WhatsApp lalu coba lagi.",
+                "error",
+              );
+              button.disabled = false;
+              button.textContent = "Coba lagi";
+            });
+        });
+        if (!referenceId)
+          show(
+            "Kode referensi tidak ada pada halaman ini. Silakan buka tautan return dari payment gateway.",
+            "error",
+          );
+        requestAnimationFrame(function () {
+          document.getElementById("card").classList.add("active");
+        });
+      })();
+    </script>
+  </body>
+</html>

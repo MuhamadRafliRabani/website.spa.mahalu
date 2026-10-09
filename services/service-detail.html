@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">
+      Detail Layanan | Mahalu Spa — Wellness & Retreat
+    </title>
+
+    <meta
+      id="page-description"
+      name="description"
+      content="Detail lengkap layanan spa, nail art, eyelash, dan wellness therapy di Mahalu Spa Depok — manfaat, cara penggunaan, harga, dan durasi."
+    />
+    <meta id="page-keywords" name="keywords" content="" />
+    <meta id="page-robots" name="robots" content="index, follow" />
+    <link
+      id="page-canonical"
+      rel="canonical"
+      href="https://spa.mahalu.group/services/service-detail.html"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      id="og-title"
+      property="og:title"
+      content="Detail Layanan | Mahalu Spa"
+    />
+    <meta
+      id="og-description"
+      property="og:description"
+      content="Lihat manfaat, cara penggunaan, harga, dan durasi lengkap treatment ini di Mahalu Spa."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      id="og-url"
+      property="og:url"
+      content="https://spa.mahalu.group/services/service-detail.html"
+    />
+    <meta
+      id="og-image"
+      property="og:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+      ::selection {
+        background-color: var(--accent);
+        color: #fff;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .menu-leader {
+        flex-grow: 1;
+        border-bottom: 1px dotted var(--accent);
+        opacity: 0.3;
+        margin: 0 12px;
+        position: relative;
+        top: -6px;
+        transition:
+          border-color 0.3s ease,
+          opacity 0.3s ease;
+      }
+      .menu-item {
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 4px 0;
+        display: block;
+      }
+      .menu-item:hover {
+        transform: translateX(6px);
+      }
+      .menu-item:hover .menu-title {
+        color: var(--accent);
+        font-weight: 500;
+      }
+      .menu-item:hover .menu-leader {
+        border-color: var(--accent);
+        opacity: 0.6;
+      }
+      .menu-chevron {
+        color: var(--accent);
+        opacity: 0.4;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        flex-shrink: 0;
+      }
+      .menu-item:hover .menu-chevron {
+        opacity: 1;
+        transform: translateX(3px);
+      }
+      .img-zoom {
+        transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .group:hover .img-zoom {
+        transform: scale(1.06);
+      }
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          rgba(178, 102, 50, 0.08) 25%,
+          rgba(178, 102, 50, 0.15) 37%,
+          rgba(178, 102, 50, 0.08) 63%
+        );
+        background-size: 400% 100%;
+        animation: skeleton-loading 1.4s ease infinite;
+      }
+      @keyframes skeleton-loading {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+      /* --- Gallery thumbnails --- */
+      .thumb-btn {
+        border: 2px solid transparent;
+        opacity: 0.55;
+        transition: all 0.25s ease;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .thumb-btn:hover {
+        opacity: 0.9;
+      }
+      .thumb-btn.active {
+        border-color: var(--accent);
+        opacity: 1;
+      }
+      /* --- Category chip --- */
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--accent);
+        background: rgba(178, 102, 50, 0.08);
+        border: 1px solid rgba(178, 102, 50, 0.2);
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-bg relative">
+    <div id="header-container"></div>
+
+    <main id="service-detail" class="w-full">
+      <!-- Breadcrumb -->
+      <!-- <nav
+        class="max-w-[1100px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-2 text-xs md:text-sm font-body text-muted"
+        aria-label="Breadcrumb"
+      >
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a href="/" class="hover:text-accent transition-colors">Home</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/services.html" class="hover:text-accent transition-colors"
+              >Services</a
+            >
+          </li>
+          <li id="breadcrumb-dynamic" class="flex items-center gap-2"></li>
+        </ol>
+      </nav> -->
+
+      <!-- State: loading -->
+      <div
+        id="detail-loading"
+        class="max-w-[1100px] mx-auto px-6 md:px-12 pt-24 pb-10 md:pt-32"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16">
+          <div class="skeleton aspect-[4/3] lg:aspect-[4/5] rounded-2xl"></div>
+          <div class="flex flex-col gap-4 pt-2">
+            <div class="skeleton h-4 w-32 rounded"></div>
+            <div class="skeleton h-10 w-3/4 rounded"></div>
+            <div class="skeleton h-6 w-40 rounded"></div>
+            <div class="skeleton h-24 w-full rounded"></div>
+            <div class="skeleton h-12 w-48 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- State: not found / error -->
+      <div
+        id="detail-error"
+        class="hidden max-w-[600px] mx-auto text-center px-6 pt-28 pb-24 md:pt-36"
+      >
+        <span
+          class="font-subhead italic text-accent tracking-[0.1em] uppercase text-sm"
+          >Oops</span
+        >
+        <h1 class="font-head text-3xl md:text-4xl text-text mt-3 mb-4">
+          Layanan tidak ditemukan
+        </h1>
+        <p class="font-body text-muted mb-8">
+          Link ini mungkin sudah tidak berlaku, atau layanannya sudah tidak
+          tersedia lagi. Coba kembali ke daftar layanan kami.
+        </p>
+        <a
+          href="/services"
+          class="inline-block font-body text-sm font-bold tracking-widest uppercase text-bg bg-accent px-6 py-3 rounded-full hover:bg-dark transition-colors"
+          >Lihat Semua Layanan</a
+        >
+      </div>
+
+      <!-- State: loaded -->
+      <div id="detail-content" class="hidden">
+        <section
+          class="max-w-[1100px] mx-auto px-6 md:px-12 pt-24 pb-10 md:pt-32 md:pb-20"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start"
+          >
+            <!-- Image + gallery -->
+            <div class="flex flex-col gap-3">
+              <div
+                class="group relative w-full aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden bg-black/5"
+              >
+                <img
+                  id="detail-image"
+                  src=""
+                  alt=""
+                  class="w-full h-full object-cover img-zoom"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop'
+                  "
+                />
+                <div
+                  id="detail-discount-badge"
+                  class="hidden absolute top-4 left-4 bg-accent text-bg text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full"
+                ></div>
+              </div>
+              <div
+                id="detail-thumbs"
+                class="hidden grid grid-cols-4 gap-2 md:gap-3"
+              ></div>
+            </div>
+
+            <!-- Info -->
+            <div class="pt-1 md:pt-2">
+              <div class="flex flex-wrap items-center gap-2 mb-4">
+                <span id="detail-category-chip" class="chip hidden"></span>
+              </div>
+              <span
+                id="detail-eyebrow"
+                class="font-subhead italic text-accent tracking-[0.1em] uppercase text-sm"
+              ></span>
+              <h1
+                id="detail-title"
+                class="font-head text-3xl md:text-5xl text-text leading-[1.15] md:leading-[1.1] mt-3 mb-5"
+              ></h1>
+
+              <div class="flex flex-wrap items-center gap-4 md:gap-5 mb-6">
+                <span
+                  id="detail-duration"
+                  class="hidden items-center gap-1.5 text-sm font-body text-muted"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 3" stroke-linecap="round" />
+                  </svg>
+                  <span id="detail-duration-text"></span>
+                </span>
+                <div class="flex items-baseline gap-2">
+                  <span
+                    id="detail-price-old"
+                    class="hidden text-muted text-sm line-through"
+                  ></span>
+                  <span
+                    id="detail-price"
+                    class="font-head text-2xl md:text-3xl text-dark"
+                  ></span>
+                </div>
+              </div>
+
+              <p
+                id="detail-description"
+                class="font-body text-text/80 leading-relaxed mb-8 whitespace-pre-line"
+              ></p>
+
+              <!-- CTA — selalu tampil di sini, tidak bergantung ada/tidaknya benefits/usage -->
+              <div class="flex flex-col sm:flex-row gap-3">
+                <button
+                  data-mahalu-booking
+                  type="button"
+                  href="#"
+                  class="w-full sm:w-auto font-body text-sm font-bold tracking-widest uppercase text-bg bg-accent px-8 py-4 rounded-full hover:bg-dark transition-colors text-center"
+                >
+                  Book This Treatment
+                </button>
+                <a
+                  id="detail-wa-btn"
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-full sm:w-auto font-body text-sm font-bold tracking-widest uppercase text-accent border border-accent px-8 py-4 rounded-full hover:bg-accent hover:text-bg transition-colors text-center"
+                >
+                  Tanya via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Benefits & How to use -->
+        <section
+          id="detail-extra"
+          class="hidden w-full bg-black/[0.02] border-y border-muted/15 py-12 md:py-20"
+        >
+          <div
+            class="max-w-[1100px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20"
+          >
+            <div id="detail-benefits-block" class="hidden">
+              <h2 class="font-head text-2xl md:text-3xl text-text mb-6">
+                Manfaat
+              </h2>
+              <ul
+                id="detail-benefits-list"
+                class="flex flex-col gap-3 font-body text-text/80"
+              ></ul>
+            </div>
+            <div id="detail-usage-block" class="hidden">
+              <h2 class="font-head text-2xl md:text-3xl text-text mb-6">
+                Cara Penggunaan
+              </h2>
+              <ul
+                id="detail-usage-list"
+                class="flex flex-col gap-3 font-body text-text/80"
+              ></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related services -->
+        <section
+          id="detail-related"
+          class="hidden w-full py-14 md:py-24 px-6 md:px-12"
+        >
+          <div class="max-w-[1100px] mx-auto">
+            <span
+              class="font-subhead italic text-accent tracking-[0.1em] uppercase text-sm"
+              >Lainnya</span
+            >
+            <h2
+              id="detail-related-title"
+              class="font-head text-2xl md:text-4xl text-text mt-2 mb-8"
+            >
+              Layanan Terkait
+            </h2>
+            <ul
+              id="detail-related-list"
+              class="flex flex-col gap-3 max-w-[700px]"
+            ></ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/assets/js/mahalu-shared.js"></script>
+    <script src="/booking-widget.js?v=2"></script>
+
+    <script>
+      // API_BASE, CATALOG_ENDPOINT, VARIANT_ENDPOINT, formatRupiah,
+      // escapeHtml, findVariantContext datang dari mahalu-shared.js.
+
+      const params = new URLSearchParams(window.location.search);
+      const productName = params.get("product");
+
+      // Ambil dari footer situs (+62 896-0909-5700), format internasional
+      // tanpa '+' untuk dipakai di link wa.me.
+      const WHATSAPP_NUMBER = "6289609095700";
+
+      // Diisi setelah fetch sukses, dipakai lagi di loadRelated()
+      // supaya nggak bergantung pada query param ?service=&category=
+      // yang gampang meleset — sekarang kita punya data asli dari API.
+      let currentContext = { category: null, service: null };
+
+      function showState(state) {
+        document
+          .getElementById("detail-loading")
+          .classList.toggle("hidden", state !== "loading");
+        document
+          .getElementById("detail-error")
+          .classList.toggle("hidden", state !== "error");
+        document
+          .getElementById("detail-content")
+          .classList.toggle("hidden", state !== "loaded");
+
+        // Halaman error (produk kosong/tidak ditemukan) tidak punya konten
+        // unik — jangan biarkan Google index-kan sebagai halaman produk.
+        const robotsTag = document.getElementById("page-robots");
+        if (robotsTag) {
+          robotsTag.setAttribute(
+            "content",
+            state === "error" ? "noindex, follow" : "index, follow",
+          );
+        }
+      }
+
+      function toList(value) {
+        if (Array.isArray(value)) return value.filter(Boolean);
+        if (typeof value === "string") {
+          return value
+            .split(/\r?\n|;/)
+            .map((s) => s.trim())
+            .filter(Boolean);
+        }
+        return [];
+      }
+
+      async function fetchVariant() {
+        if (!productName) {
+          showState("error");
+          return;
+        }
+        showState("loading");
+        try {
+          const res = await fetch(VARIANT_ENDPOINT(productName), {
+            headers: { Accept: "application/json" },
+          });
+          if (res.status === 404) throw new Error("not-found");
+          if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+          const payload = await res.json();
+          if (!payload.status || !payload.data)
+            throw new Error("Invalid payload");
+
+          renderVariant(payload.data);
+          showState("loaded");
+          loadRelated(); // non-blocking, boleh gagal diam-diam
+        } catch (error) {
+          console.error("Gagal memuat detail layanan:", error);
+          showState("error");
+        }
+      }
+
+      // ------------------------------------------------------------
+      // Bentuk response asli GET /api/public/products/{nama}:
+      // {
+      //   data: {
+      //     id, name, duration_minutes,
+      //     retail_price, special_price, final_price,
+      //     service:  { name },
+      //     category: { name, slug },
+      //     detail: {
+      //       description, benefits[], how_to_use,
+      //       images[], meta_title, meta_description, meta_keywords
+      //     }
+      //   }
+      // }
+      // ------------------------------------------------------------
+      function renderVariant(data) {
+        const name = data.name || productName;
+        const detail = data.detail || {};
+        const serviceName = data.service?.name || "";
+        const categoryName = data.category?.name || "";
+
+        const description = detail.description || "";
+        const benefits = toList(detail.benefits);
+        const usage = toList(detail.how_to_use);
+        const images = Array.isArray(detail.images)
+          ? detail.images.filter(Boolean)
+          : [];
+
+        const metaTitle = detail.meta_title;
+        const metaDescription = detail.meta_description;
+        const metaKeywords = detail.meta_keywords;
+
+        const duration = data.duration_minutes;
+        const retail = Number(data.retail_price || 0);
+        const specialRaw = data.special_price;
+        const final = Number(data.final_price ?? retail);
+        const hasDiscount = specialRaw && Number(specialRaw) < retail;
+
+        currentContext = { category: categoryName, service: serviceName };
+
+        // --- SEO ---
+        document.getElementById("page-title").textContent = metaTitle
+          ? `${metaTitle} | Mahalu Spa`
+          : `${name} | Mahalu Spa`;
+        const desc =
+          metaDescription ||
+          description ||
+          `Detail layanan ${name} di Mahalu Spa Depok.`;
+        document
+          .getElementById("page-description")
+          .setAttribute("content", desc);
+        if (metaKeywords) {
+          document
+            .getElementById("page-keywords")
+            .setAttribute("content", metaKeywords);
+        }
+        document
+          .getElementById("og-title")
+          .setAttribute("content", `${name} | Mahalu Spa`);
+        document.getElementById("og-description").setAttribute("content", desc);
+        if (images[0]) {
+          document
+            .getElementById("og-image")
+            .setAttribute("content", images[0]);
+        }
+
+        // --- Canonical & og:url — WAJIB per-produk, jangan biarkan statis ---
+        // Sebelumnya canonical selalu mengarah ke URL bare tanpa ?product=,
+        // yang jatuh ke error state di JS ini. Google jadi diarahkan ke
+        // "halaman tidak ditemukan" untuk setiap produk. Fix: set ke URL
+        // lengkap dengan query string produk yang sedang tampil.
+        const canonicalUrl = `https://spa.mahalu.group/services/service-detail.html?product=${encodeURIComponent(name)}`;
+        document
+          .getElementById("page-canonical")
+          .setAttribute("href", canonicalUrl);
+        document.getElementById("og-url").setAttribute("content", canonicalUrl);
+
+        // --- Breadcrumb (nonaktif — nav-nya masih di-comment di HTML) ---
+        // document.getElementById("detail-eyebrow").textContent =
+        //   serviceName || "Treatment";
+        // const crumb = document.getElementById("breadcrumb-dynamic");
+        // crumb.innerHTML = "";
+        // [categoryName, serviceName].filter(Boolean).forEach((label) => {
+        //   crumb.insertAdjacentHTML(
+        //     "beforeend",
+        //     `<span aria-hidden="true">/</span><span class="text-text/70">${escapeHtml(label)}</span>`,
+        //   );
+        // });
+        document.getElementById("detail-eyebrow").textContent =
+          serviceName || "Treatment";
+
+        // --- Category chip ---
+        if (categoryName) {
+          const chip = document.getElementById("detail-category-chip");
+          chip.textContent = categoryName;
+          chip.classList.remove("hidden");
+        }
+
+        // --- Title, price, duration ---
+        document.getElementById("detail-title").textContent = name;
+        document.getElementById("detail-price").textContent = formatRupiah(
+          hasDiscount ? final : final || retail,
+        );
+        const oldPriceEl = document.getElementById("detail-price-old");
+        if (hasDiscount) {
+          oldPriceEl.textContent = formatRupiah(retail);
+          oldPriceEl.classList.remove("hidden");
+          const badge = document.getElementById("detail-discount-badge");
+          const pct = Math.round((1 - Number(final) / retail) * 100);
+          badge.textContent = `Hemat ${pct}%`;
+          badge.classList.remove("hidden");
+        }
+        if (duration) {
+          const durationEl = document.getElementById("detail-duration");
+          durationEl.classList.remove("hidden");
+          durationEl.classList.add("flex");
+          document.getElementById("detail-duration-text").textContent =
+            `${duration} menit`;
+        }
+
+        // --- Description ---
+        document.getElementById("detail-description").textContent =
+          description ||
+          `Rasakan treatment ${name}, salah satu layanan andalan kami di Mahalu Spa.`;
+
+        // --- Image + gallery ---
+        const imgEl = document.getElementById("detail-image");
+        imgEl.src = images[0] || "/assets/img/17.jpg";
+        imgEl.alt = name;
+
+        if (images.length > 1) {
+          const thumbsEl = document.getElementById("detail-thumbs");
+          thumbsEl.classList.remove("hidden");
+          thumbsEl.classList.add("grid");
+          thumbsEl.innerHTML = images
+            .map(
+              (src, i) => `
+              <button
+                type="button"
+                class="thumb-btn aspect-square ${i === 0 ? "active" : ""}"
+                data-src="${escapeHtml(src)}"
+                aria-label="Lihat foto ${i + 1}"
+              >
+                <img src="${escapeHtml(src)}" alt="${escapeHtml(name)} ${i + 1}" class="w-full h-full object-cover" />
+              </button>`,
+            )
+            .join("");
+
+          thumbsEl.querySelectorAll(".thumb-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              imgEl.src = btn.dataset.src;
+              thumbsEl
+                .querySelectorAll(".thumb-btn")
+                .forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+            });
+          });
+        }
+
+        // --- Benefits ---
+        if (benefits.length) {
+          document.getElementById("detail-extra").classList.remove("hidden");
+          document
+            .getElementById("detail-benefits-block")
+            .classList.remove("hidden");
+          document.getElementById("detail-benefits-list").innerHTML = benefits
+            .map(
+              (item) => `
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>${escapeHtml(item)}</span>
+              </li>`,
+            )
+            .join("");
+        }
+
+        // --- How to use ---
+        if (usage.length) {
+          document.getElementById("detail-extra").classList.remove("hidden");
+          document
+            .getElementById("detail-usage-block")
+            .classList.remove("hidden");
+          document.getElementById("detail-usage-list").innerHTML = usage
+            .map(
+              (item, i) => `
+              <li class="flex items-start gap-3">
+                <span class="font-head text-accent text-sm mt-0.5">${String(i + 1).padStart(2, "0")}</span>
+                <span>${escapeHtml(item)}</span>
+              </li>`,
+            )
+            .join("");
+        }
+
+        // --- CTA: Book button ---
+        // document
+        //   .getElementById("detail-book-btn")
+        //   .addEventListener("click", () => {
+        //     // TODO(Bani): sambungkan ke trigger booking widget yang sama
+        //     // dipakai tombol "BOOK NOW" di header (booking-widget.js).
+        //     // Kalau widget itu expose function global — misal
+        //     // window.openBookingWidget({ variant }) — panggil itu di sini
+        //     // dan hapus fallback redirect di bawah.
+        //     if (typeof window.openBookingWidget === "function") {
+        //       window.openBookingWidget({ variant: name });
+        //     } else {
+        //       window.location.href = "/#booking";
+        //     }
+        //   });
+
+        // --- CTA: WhatsApp button ---
+        const waMessage = encodeURIComponent(
+          `Halo Mahalu Spa, saya mau tanya tentang layanan "${name}".`,
+        );
+        document.getElementById("detail-wa-btn").href =
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`;
+
+        injectServiceSchema({
+          name,
+          description,
+          image: images[0],
+          price: hasDiscount ? final : final || retail,
+        });
+      }
+
+      function injectServiceSchema({ name, description, image, price }) {
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name,
+          description: description || undefined,
+          image: image || undefined,
+          provider: {
+            "@type": "BeautySalon",
+            name: "Mahalu Spa, Nail Art & Eyelash",
+            telephone: "+62896-0909-5700",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress:
+                "Jl. Raya Abdul Gani No.48, RT.006/RW.001, Kalibaru",
+              addressLocality: "Kecamatan Cilodong, Kota Depok",
+              addressRegion: "Jawa Barat",
+              postalCode: "16414",
+              addressCountry: "ID",
+            },
+          },
+          offers: {
+            "@type": "Offer",
+            price: String(price || 0),
+            priceCurrency: "IDR",
+            url: window.location.href,
+          },
+        };
+        const existing = document.getElementById("service-schema");
+        if (existing) existing.remove();
+        const script = document.createElement("script");
+        script.id = "service-schema";
+        script.type = "application/ld+json";
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+      }
+
+      // Fetch katalog penuh untuk cari service induk & "layanan terkait".
+      // Non-blocking, jalan setelah konten utama tampil.
+      async function loadRelated() {
+        try {
+          const res = await fetch(CATALOG_ENDPOINT, {
+            headers: { Accept: "application/json" },
+          });
+          const payload = await res.json();
+          if (!payload.status || !Array.isArray(payload.data)) return;
+
+          const context = findVariantContext(payload.data, productName);
+          if (!context || !context.siblings.length) return;
+
+          const list = context.siblings.slice(0, 4);
+          document.getElementById("detail-related-title").textContent =
+            context.service.name;
+          document.getElementById("detail-related-list").innerHTML = list
+            .map((v) => {
+              const url = `service-detail.html?product=${encodeURIComponent(v.name)}&service=${encodeURIComponent(context.service.name)}&category=${encodeURIComponent(context.category.name)}`;
+              return `
+                <li>
+                  <a href="${url}" class="menu-item flex justify-between items-end text-sm md:text-base font-body">
+                    <span class="menu-title font-light text-text/90 transition-colors pr-2">
+                      ${escapeHtml(v.name)} <span class="text-muted text-xs">${v.duration_minutes ? v.duration_minutes + "'" : ""}</span>
+                    </span>
+                    <span class="menu-leader hidden sm:block"></span>
+                    <span class="whitespace-nowrap pl-1 md:pl-2 inline-flex items-center">
+                      <span class="font-medium tracking-wide text-text">${formatRupiah(v.final_price ?? v.retail_price)}</span>
+                      <span class="menu-chevron ml-2" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                      </span>
+                    </span>
+                  </a>
+                </li>`;
+            })
+            .join("");
+          document.getElementById("detail-related").classList.remove("hidden");
+        } catch (error) {
+          console.error("Gagal memuat layanan terkait:", error);
+          // gagal diam-diam — bukan konten inti halaman
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", fetchVariant);
+    </script>
+  </body>
+</html>

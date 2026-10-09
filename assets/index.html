@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mahalu Spa — Wellness & Retreat</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div class="container nav-inner">
+        <a class="logo" href="index.html" aria-label="Mahalu Spa — Home">
+          <img src="assets/logo/Logo2.png" alt="Mahalu Spa logo" class="site-logo" loading="lazy" decoding="async" width="400" height="120" />
+        </a>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-book" href="contact.html">BOOK NOW</a>
+          <button id="hamburger" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO (VIDEO) -->
+    <section id="home" class="hero">
+      <div class="hero-video-wrap">
+        <!-- VIDEO BACKGROUND -->
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/hero.jpg">
+          <source src="assets/hero.webm" type="video/webm" />
+          <source src="assets/video-bg/bg1.mp4" type="video/mp4" />
+        </video>
+
+        <!-- TEXT OVERLAY (DI ATAS VIDEO) -->
+        <div class="hero-overlay">
+          <h1 class="hero-title">Touch. Lite. Harmony</h1>
+          <p class="hero-sub">Art organic escape — body, facial care, nails, skin, lashes, brows.</p>
+          <a class="btn btn-cta" href="contact.html">BOOK NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFI -->
+    <section class="page-section about container">
+      <div class="split">
+        <div class="text">
+          <h2>Filosofi Ketenangan</h2>
+          <p>Kami percaya kecantikan bukan sekadar hasil perawatan, tapi energi yang muncul ketika pikiran, napas, dan emosi kembali dalam satu irama.</p>
+        </div>
+        <div class="image">
+          <img src="assets/gambar/gambar (2).png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTIONS (OPTIONAL DI HOME) -->
+    <section class="page-section container">
+      <h2>Explore Mahalu</h2>
+      <p>
+        <a href="services.html">Our Services</a> · <a href="gallery.html">View Gallery</a> ·
+        <a href="contact.html">Find Our Place</a>
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Mahalu Spa &copy; 2025</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

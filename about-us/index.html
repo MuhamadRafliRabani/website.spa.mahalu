@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tentang Mahalu Spa Depok — Filosofi, Tim Terapis & Sertifikasi
+    </title>
+    <meta
+      name="description"
+      content="Mahalu Spa Depok berdedikasi menghadirkan perawatan spa premium dengan tim terapis profesional tersertifikasi. Pelajari filosofi wellness kami dan komitmen terhadap kualitas."
+    />
+    <meta
+      name="keywords"
+      content="Tentang Mahalu Spa, Kisah Spa Depok, Filosofi Mahalu, Wellness Spa Terbaik"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical dan og:url mengikuti path halaman yang sebenarnya di folder /about-us/ -->
+    <link rel="canonical" href="https://spa.mahalu.group/about-us/" />
+
+    <!-- Open Graph untuk Sosial Media (Spesifik About) -->
+    <meta property="og:title" content="About Mahalu Spa — Wellness & Retreat" />
+    <meta
+      property="og:description"
+      content="Temukan harmoni dan ketenangan sejati. Pelajari filosofi di balik layanan premium Mahalu Spa."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spa.mahalu.group/about-us/" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Color Palette */
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+
+        /* Typography */
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      /* Custom Text Selection */
+      ::selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+      ::-moz-selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      /* Hide scrollbar but keep functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Image Zoom Animation */
+      .img-zoom {
+        transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .group:hover .img-zoom {
+        transform: scale(1.08);
+      }
+
+      /* Scroll Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Subtle Fade for Sticky Elements */
+      .reveal-fade {
+        opacity: 0;
+        transition: opacity 1.5s ease-out;
+      }
+      .reveal-fade.active {
+        opacity: 1;
+      }
+
+      .nav-link-modern {
+        color: white;
+        position: relative;
+        transition: 0.3s;
+
+        /* 🔥 ini penyelamat */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-link-modern:hover {
+        color: var(--accent);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- SEO BEST PRACTICE: Structured Data Khusus Halaman About -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Mahalu Spa",
+        "description": "Kisah dan Filosofi di balik Mahalu Spa Depok.",
+        "url": "https://spa.mahalu.group/about-us",
+        "publisher": {
+          "@type": "BeautySalon",
+          "name": "Mahalu Spa & Wellness"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-bg relative">
+    <!-- HEADER INJECTION POINT -->
+    <div id="header-container"></div>
+
+    <main class="w-full">
+      <!-- HERO SECTION (Background Image Style) -->
+      <section
+        class="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center bg-text overflow-hidden"
+      >
+        <!-- Background Image (Eager Load untuk Hero) -->
+        <img
+          src="/assets/img/17.jpg"
+          alt="Mahalu Spa Atmosphere"
+          class="absolute inset-0 w-full h-full object-cover img-zoom origin-center object-[center_65%] opacity-90"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop'
+          "
+        />
+        <!-- Overlays for readability -->
+        <div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+        ></div>
+
+        <!-- Content -->
+        <div
+          class="relative z-10 w-full max-w-[1000px] mx-auto px-6 text-center mt-16 md:mt-24"
+        >
+          <div class="reveal active flex flex-col items-center">
+            <span
+              class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-4 mb-6"
+            >
+              <span class="w-8 h-[1px] bg-accent"></span> About Us
+              <span class="w-8 h-[1px] bg-accent"></span>
+            </span>
+            <h1
+              class="font-head text-5xl md:text-7xl lg:text-[85px] text-bg leading-[1.05] drop-shadow-lg mb-6"
+            >
+              A Sanctuary for <br />
+              <span class="italic text-accent">Mind & Body</span>
+            </h1>
+            <p
+              class="font-body text-[#fff4ed]/75 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed"
+            >
+              Mahalu Spa hadir sebagai pelarian yang menenangkan, tempat di mana
+              kecantikan, kesejahteraan, dan harmoni batin menyatu melalui
+              sentuhan yang penuh kesadaran.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY SECTION -->
+      <section class="relative w-full bg-bg py-20 md:py-32">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start"
+          >
+            <!-- Sticky Text Column -->
+            <div
+              class="lg:col-span-5 lg:sticky lg:top-40 reveal-fade flex flex-col pt-4"
+            >
+              <span
+                class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm mb-6"
+              >
+                Our Philosophy
+              </span>
+              <h2
+                class="font-head text-4xl md:text-5xl lg:text-6xl text-text mb-8 leading-[1.1]"
+              >
+                Beauty Begins <br />in Stillness
+              </h2>
+              <div
+                class="font-body font-light text-muted text-lg leading-relaxed flex flex-col gap-6 text-justify"
+              >
+                <p>
+                  Kami percaya kecantikan sejati lahir dari ketenangan. Dari
+                  tubuh yang didengarkan, dari napas yang disadari, dan dari
+                  ruang yang diciptakan dengan penuh kehangatan.
+                </p>
+                <p>
+                  Mahalu Spa hadir sebagai ruang untuk memperlambat waktu —
+                  tempat di mana perawatan menjadi ritual, dan setiap sentuhan
+                  membawa Anda kembali pada keseimbangan diri.
+                </p>
+              </div>
+            </div>
+
+            <!-- Scrollable Image Column -->
+            <div class="lg:col-span-7 reveal">
+              <div
+                class="group relative overflow-hidden rounded-[2rem] shadow-xl w-full h-[500px] md:h-[700px]"
+              >
+                <img
+                  src="/assets/gambar/gambar (4).png"
+                  alt="Mahalu Philosophy"
+                  class="w-full h-full object-cover img-zoom"
+                  loading="lazy"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop'
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY SECTION -->
+      <section class="relative w-full bg-bg pb-24 md:pb-40">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+          <!-- Reverse Grid: Image Left, Text Right -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start flex-col-reverse lg:flex-row"
+          >
+            <!-- Scrollable Image Column -->
+            <div class="lg:col-span-7 order-2 lg:order-1 reveal">
+              <div
+                class="group relative overflow-hidden rounded-[2rem] shadow-xl w-full h-[500px] md:h-[700px]"
+              >
+                <img
+                  src="/assets/gambar/gambar (7).png"
+                  alt="Mahalu Story"
+                  class="w-full h-full object-cover img-zoom"
+                  loading="lazy"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1200&auto=format&fit=crop'
+                  "
+                />
+              </div>
+            </div>
+
+            <!-- Sticky Text Column -->
+            <div
+              class="lg:col-span-5 lg:sticky lg:top-40 order-1 lg:order-2 reveal-fade flex flex-col pt-4"
+            >
+              <span
+                class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm mb-6"
+              >
+                Our Story
+              </span>
+              <h2
+                class="font-head text-4xl md:text-5xl lg:text-6xl text-text mb-8 leading-[1.1]"
+              >
+                A Journey <br />Back to Self
+              </h2>
+              <div
+                class="font-body font-light text-muted text-lg leading-relaxed flex flex-col gap-6 text-justify"
+              >
+                <p>
+                  Mahalu Spa lahir dari keinginan sederhana: menciptakan ruang
+                  yang aman, hangat, dan penuh kesadaran di tengah hiruk pikuk
+                  kehidupan modern.
+                </p>
+                <p>
+                  Terinspirasi dari ritual perawatan tradisional dan sentuhan
+                  modern, setiap layanan kami dirancang untuk merawat tubuh,
+                  menenangkan pikiran, dan menghidupkan kembali energi alami
+                  dalam diri Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR VALUES SECTION (Modern Editorial Grid Redesign) -->
+      <section class="w-full bg-bg pb-24 md:pb-32 px-6 md:px-12">
+        <div class="max-w-[1400px] mx-auto">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col items-center text-center mb-16 md:mb-20 reveal"
+          >
+            <span
+              class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm mb-4"
+              >Our Values</span
+            >
+            <h2 class="font-head text-4xl md:text-5xl lg:text-6xl text-text">
+              What We Stand For
+            </h2>
+            <div class="w-16 h-[2px] bg-accent mt-8"></div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
+          >
+            <!-- Value 1 -->
+            <div
+              class="group relative bg-white pt-12 pb-10 px-8 rounded-[2rem] shadow-sm hover:shadow-2xl border border-muted/5 transform hover:-translate-y-2 transition-all duration-500 ease-out reveal"
+            >
+              <div
+                class="absolute top-0 left-10 right-10 h-[3px] bg-accent/20 group-hover:bg-accent rounded-b-md transition-colors duration-500"
+              ></div>
+
+              <!-- Icon Container: Changes bg to Accent and text to White on Hover -->
+              <div
+                class="w-16 h-16 rounded-2xl bg-bg flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-head text-2xl text-text mb-4">Mindful Care</h3>
+              <p class="font-body font-light text-muted leading-relaxed">
+                Setiap perawatan dilakukan dengan penuh perhatian dan kehadiran
+                untuk memulihkan energi Anda.
+              </p>
+            </div>
+
+            <!-- Value 2 -->
+            <div
+              class="group relative bg-white pt-12 pb-10 px-8 rounded-[2rem] shadow-sm hover:shadow-2xl border border-muted/5 transform hover:-translate-y-2 transition-all duration-500 ease-out reveal"
+              style="transition-delay: 100ms"
+            >
+              <div
+                class="absolute top-0 left-10 right-10 h-[3px] bg-accent/20 group-hover:bg-accent rounded-b-md transition-colors duration-500"
+              ></div>
+
+              <div
+                class="w-16 h-16 rounded-2xl bg-bg flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-head text-2xl text-text mb-4">Natural Balance</h3>
+              <p class="font-body font-light text-muted leading-relaxed">
+                Kami mengutamakan keseimbangan alami, menghubungkan harmoni
+                antara tubuh dan pikiran.
+              </p>
+            </div>
+
+            <!-- Value 3 -->
+            <div
+              class="group relative bg-white pt-12 pb-10 px-8 rounded-[2rem] shadow-sm hover:shadow-2xl border border-muted/5 transform hover:-translate-y-2 transition-all duration-500 ease-out reveal"
+              style="transition-delay: 200ms"
+            >
+              <div
+                class="absolute top-0 left-10 right-10 h-[3px] bg-accent/20 group-hover:bg-accent rounded-b-md transition-colors duration-500"
+              ></div>
+
+              <div
+                class="w-16 h-16 rounded-2xl bg-bg flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-head text-2xl text-text mb-4">
+                Warm Hospitality
+              </h3>
+              <p class="font-body font-light text-muted leading-relaxed">
+                Kehangatan adalah pengalaman tak terpisahkan di Mahalu Spa,
+                menyambut Anda dengan tulus.
+              </p>
+            </div>
+
+            <!-- Value 4 -->
+            <div
+              class="group relative bg-white pt-12 pb-10 px-8 rounded-[2rem] shadow-sm hover:shadow-2xl border border-muted/5 transform hover:-translate-y-2 transition-all duration-500 ease-out reveal"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="absolute top-0 left-10 right-10 h-[3px] bg-accent/20 group-hover:bg-accent rounded-b-md transition-colors duration-500"
+              ></div>
+
+              <div
+                class="w-16 h-16 rounded-2xl bg-bg flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 ease-out"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-head text-2xl text-text mb-4">Timeless Beauty</h3>
+              <p class="font-body font-light text-muted leading-relaxed">
+                Menghadirkan kecantikan yang lembut, tenang, mempesona, dan
+                berkelanjutan dari dalam diri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION (Call To Action Best Practice) -->
+      <section
+        class="w-full bg-accent relative py-24 md:py-32 px-6 md:px-12 overflow-hidden"
+      >
+        <!-- Subtle Pattern / Overlay -->
+        <div
+          class="absolute inset-0 bg-text mix-blend-overlay opacity-10"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent to-text/20"
+        ></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+          <h2
+            class="font-head text-4xl md:text-5xl lg:text-6xl text-bg mb-6 leading-tight drop-shadow-md"
+          >
+            Ready to Find Your <br />Inner Harmony?
+          </h2>
+          <p
+            class="font-body font-light text-bg/40 text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+          >
+            Jadwalkan sesi perawatan Anda hari ini dan rasakan pengalaman
+            relaksasi otentik yang belum pernah Anda rasakan sebelumnya di
+            Mahalu Spa.
+          </p>
+          <a
+            href="https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501"
+            class="inline-flex items-center justify-center bg-bg text-text px-10 py-4 rounded-full font-semibold tracking-widest text-sm hover:bg-text hover:text-bg transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+          >
+            RESERVASI SEKARANG
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER INJECTION POINT -->
+    <div id="footer-container"></div>
+
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+
+    <script>
+      // Gunakan Asynchronous Function agar loading Data dan Komponen bisa berjalan pararel dan lebih cepat.
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // 1. IMPORT COMPONENTS (Header & Footer)
+          const [headerRes, footerRes] = await Promise.all([
+            fetch("components/header.html"),
+            fetch("components/footer.html"),
+          ]);
+
+          if (headerRes.ok) {
+            document.getElementById("header-container").innerHTML =
+              await headerRes.text();
+            initHeaderScript(); // Jalankan fungsi animasi header setelah HTML masuk
+          }
+          if (footerRes.ok) {
+            document.getElementById("footer-container").innerHTML =
+              await footerRes.text();
+          }
+
+          // 2. JALANKAN ANIMASI SCROLL REVEAL
+          initScrollReveal();
+        } catch (error) {
+          console.error("Gagal memuat komponen:", error);
+        }
+      });
+
+      // --- FUNGSI INISIALISASI HEADER ---
+      function initHeaderScript() {
+        const header = document.getElementById("main-header");
+        const navInner = document.getElementById("nav-inner");
+        const logoImg = document.getElementById("site-logo-img");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            header.classList.add(
+              "bg-accent/95",
+              "backdrop-blur-sm",
+              "shadow-lg",
+            );
+            navInner.classList.replace("py-5", "py-3");
+            if (logoImg) {
+              logoImg.classList.replace("h-16", "h-12");
+              logoImg.classList.replace("md:h-20", "md:h-16");
+            }
+          } else {
+            header.classList.remove(
+              "bg-accent/95",
+              "backdrop-blur-sm",
+              "shadow-lg",
+            );
+            navInner.classList.replace("py-3", "py-5");
+            if (logoImg) {
+              logoImg.classList.replace("h-12", "h-16");
+              logoImg.classList.replace("md:h-16", "md:h-20");
+            }
+          }
+        });
+
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const mobileNavLinks = mobileNav.querySelectorAll("a");
+
+        const toggleMenu = () => {
+          hamburger.classList.toggle("active");
+          if (mobileNav.classList.contains("opacity-0")) {
+            mobileNav.classList.remove("opacity-0", "pointer-events-none");
+            mobileNav.classList.add("open");
+            document.body.style.overflow = "hidden";
+          } else {
+            mobileNav.classList.add("opacity-0", "pointer-events-none");
+            mobileNav.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        };
+
+        if (hamburger) hamburger.addEventListener("click", toggleMenu);
+
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (hamburger.classList.contains("active")) toggleMenu();
+          });
+        });
+      }
+
+      // --- FUNGSI SCROLL REVEAL ---
+      function initScrollReveal() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        // Amati elemen biasa (bergerak ke atas)
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+        // Amati elemen sticky (fade halus)
+        document
+          .querySelectorAll(".reveal-fade")
+          .forEach((el) => observer.observe(el));
+      }
+    </script>
+  </body>
+</html>

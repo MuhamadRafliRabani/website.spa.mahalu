@@ -1,0 +1,26 @@
+[
+  {
+    "title": "OUR SERVICES",
+    "sub": "Perawatan Menyeluruh",
+    "link": "services",
+    "image": "/assets/gambar/gambar (4).png"
+  },
+  {
+    "title": "OUR GALLERY",
+    "sub": "Lihat Suasana",
+    "link": "gallery",
+    "image": "/assets/gambar/gambar (7).png"
+  },
+  {
+    "title": "FIND US",
+    "sub": "Lokasi Kami",
+    "link": "contact-us",
+    "image": "/assets/gambar/gambar (51).png"
+  },
+  {
+    "title": "BOOK NOW",
+    "sub": "Reservasi Jadwal",
+    "link": "https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501",
+    "image": "/assets/gambar/gambar (35).png"
+  }
+]

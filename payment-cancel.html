@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/logo/favicon-48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/logo/favicon-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/logo/apple-touch-icon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran Dibatalkan — Mahalu Spa</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#b26632" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      ::selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes pop-in {
+        0% {
+          transform: scale(0.6);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.08);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .pop-in {
+        animation: pop-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-bg relative">
+    <div id="header-container"></div>
+
+    <main
+      class="w-full min-h-[100vh] flex items-center justify-center px-6 py-28"
+    >
+      <div class="w-full max-w-lg text-center reveal" id="card">
+        <div
+          class="w-20 h-20 mx-auto mb-7 rounded-full bg-muted/10 flex items-center justify-center pop-in"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#907e70"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+
+        <h1 class="font-head text-3xl md:text-4xl text-text mb-3">
+          Pembayaran Dibatalkan
+        </h1>
+        <p
+          class="font-body text-muted text-[15px] leading-relaxed mb-8 max-w-sm mx-auto"
+        >
+          Booking Anda
+          <span id="cancel-code" class="text-text font-medium"></span>
+          belum dibayar. Slot belum terkonfirmasi — silakan coba lagi atau
+          hubungi kami jika butuh bantuan.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/#"
+            data-mahalu-booking
+            class="inline-flex items-center justify-center bg-accent text-bg px-8 py-3.5 rounded-full font-semibold tracking-wide text-sm hover:bg-dark hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(178,102,50,0.3)] transition-all duration-300"
+          >
+            Coba Booking Lagi
+          </a>
+          <a
+            href="/"
+            class="inline-flex items-center justify-center border border-accent text-accent px-8 py-3.5 rounded-full font-semibold tracking-wide text-sm hover:bg-accent hover:text-bg hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Kembali ke Beranda
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var bookingCode =
+          new URLSearchParams(window.location.search).get("payment_ref") ||
+          new URLSearchParams(window.location.search).get("booking_code");
+        var codeEl = document.getElementById("cancel-code");
+        if (bookingCode && codeEl) {
+          codeEl.textContent = "(" + bookingCode + ")";
+        } else if (codeEl) {
+          codeEl.remove();
+        }
+
+        var card = document.getElementById("card");
+        requestAnimationFrame(function () {
+          card.classList.add("active");
+        });
+      });
+    </script>
+
+    <!--
+      data-mahalu-booking on the "Coba Booking Lagi" button re-opens the
+      same booking widget used on the homepage. Make sure this page also
+      loads the widget config + script, same as index.html.
+    -->
+    <script>
+      window.MAHALU_BOOKING_CONFIG = {
+        apiBase: "https://ads.langitlangit.id/backend/api",
+      };
+    </script>
+    <script src="/booking-widget.js"></script>
+  </body>
+</html>

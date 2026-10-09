@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Spa Online Depok | Mahalu Spa</title>
+    <meta
+      name="description"
+      content="Booking spa dan perawatan beauty di Mahalu Spa Depok. Pilih layanan, tentukan tanggal dan jam kunjungan, lalu lanjutkan pemesanan online."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://spa.mahalu.group/booking/" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Mahalu Spa Depok" />
+    <meta property="og:title" content="Booking Spa Online Depok | Mahalu Spa" />
+    <meta
+      property="og:description"
+      content="Pilih perawatan spa dan beauty, cek jadwal, lalu booking online di Mahalu Spa Depok."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spa.mahalu.group/booking/" />
+    <meta
+      property="og:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Booking Spa Online Depok | Mahalu Spa"
+    />
+    <meta
+      name="twitter:description"
+      content="Pilih perawatan spa dan beauty, cek jadwal, lalu booking online di Mahalu Spa Depok."
+    />
+    <meta
+      name="twitter:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+    <meta name="theme-color" content="#b26632" />
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://spa.mahalu.group/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Booking",
+            "item": "https://spa.mahalu.group/booking/"
+          }
+        ]
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+      ::selection {
+        background-color: var(--accent);
+        color: #fff;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .img-zoom {
+        transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .service-card {
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+      }
+      .step-num {
+        font-family: var(--font-head);
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        background: rgba(178, 102, 50, 0.1);
+        border: 1px solid rgba(178, 102, 50, 0.25);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-bg">
+    <div id="header-container"></div>
+
+    <main class="w-full">
+      <!-- HERO — pola sama dengan halaman /layanan/ -->
+      <section
+        class="relative w-full h-[42vh] min-h-[420px] flex items-center justify-center overflow-hidden"
+      >
+        <img
+          src="/assets/img/17.jpg"
+          alt="Booking Mahalu Spa Depok"
+          class="absolute inset-0 w-full h-full object-cover img-zoom origin-center object-[center_60%] opacity-90"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000&auto=format&fit=crop'
+          "
+        />
+        <div class="absolute inset-0 bg-black/25 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent"
+        ></div>
+
+        <div
+          class="relative z-10 w-full max-w-[900px] mx-auto px-6 text-center pt-14 reveal active"
+        >
+          <nav
+            aria-label="Breadcrumb"
+            class="mb-5 text-xs md:text-sm font-body text-white/70"
+          >
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <span class="mx-2" aria-hidden="true">/</span>
+            <span class="text-white/90">Booking</span>
+          </nav>
+          <span
+            class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-4 mb-5"
+          >
+            <span class="w-8 h-[1px] bg-accent"></span> Reservasi
+            <span class="w-8 h-[1px] bg-accent"></span>
+          </span>
+          <h1
+            class="font-head text-4xl md:text-6xl text-bg leading-[1.1] drop-shadow-lg mb-4"
+          >
+            Booking Spa &amp; Beauty Online
+          </h1>
+          <p
+            class="font-body text-[#fff4ed]/80 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed mb-8"
+          >
+            Pilih perawatan, tentukan jadwal, lalu kirim pemesanan langsung dari
+            website.
+          </p>
+          <a
+            href="/booking/"
+            data-mahalu-booking
+            class="inline-flex items-center justify-center w-full sm:w-auto bg-accent text-bg font-body font-semibold px-8 py-3.5 rounded-full hover:bg-dark transition-all duration-300"
+          >
+            Mulai Booking
+          </a>
+        </div>
+      </section>
+
+      <!-- CARA BOOKING -->
+      <section class="w-full px-6 md:px-12 py-16 md:py-24 bg-bg">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="text-center max-w-xl mx-auto mb-10 md:mb-14 reveal">
+            <h2 class="font-head text-3xl md:text-4xl text-text mb-3">
+              Cara Booking
+            </h2>
+            <p class="font-body text-text/70 leading-relaxed">
+              Hanya tiga langkah, tanpa perlu membuat akun.
+            </p>
+          </div>
+
+          <ol class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <li
+              class="service-card flex flex-col h-full bg-white/70 border border-muted/15 rounded-2xl p-6 md:p-8 hover:shadow-xl reveal"
+            >
+              <span class="step-num text-lg mb-5">1</span>
+              <h3 class="font-head text-xl md:text-2xl text-text mb-2">
+                Pilih Perawatan
+              </h3>
+              <p class="font-body text-text/70 text-sm leading-relaxed">
+                Pilih layanan spa atau beauty yang kamu butuhkan. Harga dan
+                durasi tertera di setiap layanan.
+              </p>
+            </li>
+            <li
+              class="service-card flex flex-col h-full bg-white/70 border border-muted/15 rounded-2xl p-6 md:p-8 hover:shadow-xl reveal"
+            >
+              <span class="step-num text-lg mb-5">2</span>
+              <h3 class="font-head text-xl md:text-2xl text-text mb-2">
+                Pilih Jadwal
+              </h3>
+              <p class="font-body text-text/70 text-sm leading-relaxed">
+                Lihat tanggal dan jam yang masih tersedia, lalu pilih waktu
+                kunjunganmu.
+              </p>
+            </li>
+            <li
+              class="service-card flex flex-col h-full bg-white/70 border border-muted/15 rounded-2xl p-6 md:p-8 hover:shadow-xl reveal"
+            >
+              <span class="step-num text-lg mb-5">3</span>
+              <h3 class="font-head text-xl md:text-2xl text-text mb-2">
+                Kirim Pemesanan
+              </h3>
+              <p class="font-body text-text/70 text-sm leading-relaxed">
+                Isi data pemesan, lalu ikuti instruksi pembayaran yang muncul di
+                layar.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PILIH LAYANAN -->
+      <section class="w-full px-6 md:px-12 pb-16 md:pb-24 bg-bg">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="text-center max-w-xl mx-auto mb-10 md:mb-14 reveal">
+            <h2 class="font-head text-3xl md:text-4xl text-text mb-3">
+              Belum Tahu Mau Pilih Apa?
+            </h2>
+            <p class="font-body text-text/70 leading-relaxed">
+              Lihat detail, harga, dan durasi setiap layanan sebelum booking.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            <a
+              href="/layanan/spa-dan-massage/"
+              class="service-card group flex items-center justify-center text-center bg-white/70 border border-muted/15 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span
+                class="font-head text-lg text-text group-hover:text-accent transition-colors"
+                >Spa &amp; Massage</span
+              >
+            </a>
+            <a
+              href="/layanan/nail-art/"
+              class="service-card group flex items-center justify-center text-center bg-white/70 border border-muted/15 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span
+                class="font-head text-lg text-text group-hover:text-accent transition-colors"
+                >Nail Art</span
+              >
+            </a>
+            <a
+              href="/layanan/eyelash-extension/"
+              class="service-card group flex items-center justify-center text-center bg-white/70 border border-muted/15 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span
+                class="font-head text-lg text-text group-hover:text-accent transition-colors"
+                >Eyelash Extension</span
+              >
+            </a>
+            <a
+              href="/layanan/waxing/"
+              class="service-card group flex items-center justify-center text-center bg-white/70 border border-muted/15 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span
+                class="font-head text-lg text-text group-hover:text-accent transition-colors"
+                >Waxing</span
+              >
+            </a>
+            <a
+              href="/layanan/facial-treatment/"
+              class="service-card group flex items-center justify-center text-center bg-white/70 border border-muted/15 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span
+                class="font-head text-lg text-text group-hover:text-accent transition-colors"
+                >Facial Treatment</span
+              >
+            </a>
+            <a
+              href="/layanan/"
+              class="service-card group flex items-center justify-center text-center bg-accent/10 border border-accent/20 rounded-2xl px-4 py-6 hover:shadow-xl reveal"
+            >
+              <span class="font-head text-lg text-accent">Lihat Semua</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="w-full px-6 md:px-12 py-16 bg-accent text-bg">
+        <div class="max-w-[800px] mx-auto text-center reveal">
+          <h2 class="font-head text-3xl md:text-4xl mb-5">
+            Siap untuk Pengalaman Relaksasi?
+          </h2>
+          <p class="font-body text-lg mb-8 opacity-90">
+            Booking sekarang, atau tanya dulu ke tim kami lewat WhatsApp.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <button
+              data-mahalu-booking
+              type="button"
+              class="w-full sm:w-auto bg-bg text-accent font-body font-semibold px-8 py-3.5 rounded-full hover:bg-dark hover:text-bg transition-all duration-300"
+            >
+              Booking Sekarang
+            </button>
+            <a
+              href="https://wa.me/6289609095700?text=Halo%20Mahalu%20Spa%2C%20saya%20mau%20tanya%20soal%20booking."
+              target="_blank"
+              rel="noopener"
+              class="w-full sm:w-auto border border-bg/60 text-bg font-body font-semibold px-8 py-3.5 rounded-full hover:bg-bg hover:text-accent transition-all duration-300"
+            >
+              Tanya via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+    <script>
+      window.MAHALU_BOOKING_CONFIG = {
+        apiBase: "https://ads.langitlangit.id/backend/api",
+      };
+    </script>
+    <script src="/booking-widget.js?v=2"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => initScrollReveal());
+      function initScrollReveal() {
+        const observer = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            }),
+          { threshold: 0.15 },
+        );
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery & Ambience | Mahalu Spa — Wellness & Retreat</title>
+
+    <!-- SEO BEST PRACTICE -->
+    <meta
+      name="description"
+      content="Jelajahi suasana menenangkan dan fasilitas premium di Mahalu Spa Depok melalui galeri foto kami. Lihat momen perawatan spa, nail art, dan relaksasi."
+    />
+    <meta
+      name="keywords"
+      content="Galeri Mahalu Spa, Foto Spa Depok, Suasana Spa, Nail Art Design Mahalu"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://spa.mahalu.group/gallery/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gallery & Ambience | Mahalu Spa" />
+    <meta
+      property="og:description"
+      content="Lihat suasana dan fasilitas premium Mahalu Spa. Ruang aman Anda untuk merawat tubuh dan batin."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spa.mahalu.group/gallery/" />
+    <meta
+      property="og:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+
+      ::selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+      ::-moz-selection {
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Animasi Kemunculan Scroll (Sangat Terasa & Mewah) */
+      .gallery-item {
+        break-inside: avoid;
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .gallery-item.show {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Animasi Transisi Gambar Loading -> Muncul */
+      .gallery-item img {
+        opacity: 0;
+        transition:
+          opacity 0.6s ease-out,
+          transform 2s ease-out;
+        will-change: transform, opacity;
+      }
+      .gallery-item img.loaded {
+        opacity: 1;
+      }
+
+      /* Filter Buttons */
+      .filter-btn {
+        transition: all 0.3s ease;
+      }
+      .filter-btn.active {
+        background-color: var(--text);
+        color: var(--bg);
+        border-color: var(--text);
+      }
+
+      /* Reveal standard untuk elemen non-gallery */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link-modern {
+        color: white;
+        position: relative;
+        transition: 0.3s;
+
+        /* 🔥 ini penyelamat */
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-link-modern:hover {
+        color: var(--accent);
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- SEO BEST PRACTICE: ImageGallery Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Mahalu Spa Gallery",
+        "description": "Kumpulan foto suasana, fasilitas, dan hasil perawatan di Mahalu Spa.",
+        "publisher": {
+          "@type": "BeautySalon",
+          "name": "Mahalu Spa & Wellness"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-bg relative">
+    <!-- HEADER INJECTION POINT -->
+    <div id="header-container"></div>
+
+    <main class="w-full">
+      <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+      <section
+        class="relative w-full h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden z-10"
+      >
+        <!-- Background Image (Eager Load for Hero) -->
+        <img
+          src="/assets/img/17.jpg"
+          alt="Mahalu Spa Gallery Atmosphere"
+          class="absolute inset-0 w-full h-full object-cover origin-center object-[center_65%] opacity-90 transition-transform duration-[3s] ease-out hover:scale-105"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000&auto=format&fit=crop'
+          "
+        />
+        <div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+        ></div>
+        <!-- Hero Content -->
+        <div
+          class="relative z-20 w-full max-w-[1000px] mx-auto px-6 text-center mt-16 md:mt-24 reveal active"
+        >
+          <div class="flex flex-col items-center">
+            <span
+              class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-4 mb-4"
+            >
+              <span class="w-12 h-[1px] bg-accent"></span> Our Ambience
+              <span class="w-12 h-[1px] bg-accent"></span>
+            </span>
+            <h1
+              class="font-head text-5xl md:text-7xl lg:text-[85px] text-bg leading-[1.05] drop-shadow-lg mb-6"
+            >
+              Gallery
+            </h1>
+            <p
+              class="font-body text-[#fff4ed]/75 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed"
+            >
+              Menelusuri setiap sudut ketenangan. Lihat lebih dekat fasilitas,
+              suasana hangat, dan hasil perawatan premium kami.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER BUTTONS -->
+      <section
+        class="w-full pt-12 pb-10 px-6 md:px-12 bg-bg relative z-10 border-b border-muted/10"
+      >
+        <div
+          class="max-w-[1400px] mx-auto reveal active"
+          style="transition-delay: 150ms"
+        >
+          <div
+            class="flex flex-wrap justify-center gap-3 md:gap-4"
+            id="filter-container"
+          >
+            <button
+              class="filter-btn active border border-muted/30 px-6 py-2.5 rounded-full font-body text-sm tracking-widest uppercase hover:border-text hover:text-text text-muted"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn border border-muted/30 px-6 py-2.5 rounded-full font-body text-sm tracking-widest uppercase hover:border-text hover:text-text text-muted"
+              data-filter="Spa & Wellness"
+            >
+              Spa & Wellness
+            </button>
+            <button
+              class="filter-btn border border-muted/30 px-6 py-2.5 rounded-full font-body text-sm tracking-widest uppercase hover:border-text hover:text-text text-muted"
+              data-filter="Nail Care"
+            >
+              Nail Care
+            </button>
+            <button
+              class="filter-btn border border-muted/30 px-6 py-2.5 rounded-full font-body text-sm tracking-widest uppercase hover:border-text hover:text-text text-muted"
+              data-filter="Ambience"
+            >
+              Ambience
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRECISION MASONRY GALLERY -->
+      <!-- CSS Columns menjamin 100% rapi tanpa ada hole/ruang kosong seperti Bento -->
+      <section class="w-full pt-12 pb-32 px-6 md:px-12 bg-bg relative z-20">
+        <div
+          id="gallery-container"
+          class="max-w-[1400px] mx-auto columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6"
+        >
+          <!-- Gallery items will be injected here by JavaScript -->
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section
+        class="w-full bg-accent relative py-24 md:py-32 px-6 md:px-12 overflow-hidden border-t-8 border-bg"
+      >
+        <div
+          class="absolute inset-0 bg-text mix-blend-overlay opacity-10"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent to-text/20"
+        ></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal active">
+          <h2
+            class="font-head text-4xl md:text-5xl lg:text-6xl text-bg mb-6 leading-tight drop-shadow-md"
+          >
+            Ready to Experience <br />True Relaxation?
+          </h2>
+          <p
+            class="font-body font-light text-bg/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+          >
+            Jadwalkan sesi perawatan Anda hari ini dan jadilah bagian dari
+            cerita relaksasi di Mahalu Spa.
+          </p>
+          <a
+            href="https://widget.zenwel.com/677947049/mahalu-spa-nail-art?lang=id&lid=16501"
+            class="inline-flex items-center justify-center bg-bg text-text px-10 py-4 rounded-full font-semibold tracking-widest text-sm hover:bg-text hover:text-bg transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+          >
+            RESERVASI SEKARANG
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER INJECTION POINT -->
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+
+    <script>
+      // --- DATA GALLERY DENGAN PREDEFINED ASPECT RATIO ---
+      // Aspect ratio menjamin grid sangat rapi dan konsisten
+      const galleryData = [
+        {
+          id: 1,
+          title: "Aromatherapy Essence",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (1).JPG",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 2,
+          title: "Spa Setup",
+          category: "Facilities",
+          src: "/assets/gambar/gambar (1).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 3,
+          title: "Candlelight Serenity",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (2).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 4,
+          title: "Foot Reflexology",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (3).JPG",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 5,
+          title: "Balinese Massage",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (4).JPG",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 6,
+          title: "Facial Treatment",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (4).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 7,
+          title: "Hot Stone Therapy",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (5).png",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1512496015851-a1c8dc6b4c16?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 8,
+          title: "Deep Tissue Massage",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (6).JPG",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 9,
+          title: "Essential Oil App.",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (6).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 10,
+          title: "Foot Spa Ritual",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (7).JPG",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 11,
+          title: "Relaxing Back Massage",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (7).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 12,
+          title: "Tranquil Bath",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (9).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 13,
+          title: "Natural Spa Products",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (10).JPG",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 14,
+          title: "Soothing Touch",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (10).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 15,
+          title: "Aroma Oil Pour",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (14).jpg",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 16,
+          title: "Candle Glow",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (15).jpg",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1512496015851-a1c8dc6b4c16?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 17,
+          title: "Foot Care",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (20).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 18,
+          title: "Pedicure Preparation",
+          category: "Nail Care",
+          src: "/assets/gambar/gambar (25).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 19,
+          title: "Elegant Nail Art",
+          category: "Nail Care",
+          src: "/assets/gambar/gambar (26).png",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 20,
+          title: "Holistic Back Massage",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (31).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 21,
+          title: "Hand Massage",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (32).png",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 22,
+          title: "Warm Stone Bliss",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (35).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 23,
+          title: "Manicure Details",
+          category: "Nail Care",
+          src: "/assets/gambar/gambar (37).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 24,
+          title: "Premium Nail Design",
+          category: "Nail Care",
+          src: "/assets/gambar/gambar (38).png",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 25,
+          title: "Head Massage Therapy",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (41).png",
+          aspect: "aspect-square",
+          fallback:
+            "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 26,
+          title: "Body Treatment",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (47).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 27,
+          title: "Evening Relaxation",
+          category: "Ambience",
+          src: "/assets/gambar/gambar (49).png",
+          aspect: "aspect-[3/4]",
+          fallback:
+            "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800&auto=format&fit=crop",
+        },
+        {
+          id: 28,
+          title: "Ultimate Comfort",
+          category: "Spa & Wellness",
+          src: "/assets/gambar/gambar (51).png",
+          aspect: "aspect-[4/3]",
+          fallback:
+            "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+        },
+      ];
+
+      // --- RENDER GALLERY (Presisi Masonry) ---
+      function renderGallery(filter = "all") {
+        const container = document.getElementById("gallery-container");
+        container.innerHTML = "";
+
+        const filteredData =
+          filter === "all"
+            ? galleryData
+            : galleryData.filter((item) => item.category === filter);
+
+        filteredData.forEach((item, index) => {
+          const html = `
+            <div class="gallery-item w-full relative rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl mb-4 md:mb-6 group bg-muted/10 ${item.aspect}" data-category="${item.category}">
+              
+              <!-- Placeholder Skeleton -->
+              <div class="absolute inset-0 animate-pulse bg-muted/20"></div>
+
+              <!-- TRUE LAZY LOADING -->
+              <!-- Hanya didownload saat masuk layar -->
+              <img src="${item.src}" alt="${item.alt}" loading="lazy" onload="this.classList.add('loaded')" onerror="this.onerror=null; this.src='${item.fallback}';" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110" />
+              
+              <!-- Modern Luxury Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-text/90 via-text/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5 md:p-6">
+                <div class="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <span class="font-body font-semibold tracking-[0.2em] uppercase text-[9px] md:text-[10px] text-bg/80 mb-1 block">
+                    ${item.category}
+                  </span>
+                  <h3 class="font-head text-lg md:text-xl lg:text-2xl text-white leading-tight">${item.title}</h3>
+                </div>
+              </div>
+            </div>
+          `;
+          container.insertAdjacentHTML("beforeend", html);
+        });
+
+        setTimeout(() => {
+          initGalleryReveal();
+        }, 100);
+      }
+
+      // --- FILTER BUTTONS LOGIC ---
+      function initFilters() {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            e.target.classList.add("active");
+
+            const filterValue = e.target.getAttribute("data-filter");
+            renderGallery(filterValue);
+          });
+        });
+      }
+
+      // Asynchronous Function agar loading Komponen berjalan pararel
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // Render Gallery Awal
+          renderGallery("all");
+          initFilters();
+        } catch (error) {
+          console.error("Gagal memuat komponen:", error);
+        }
+      });
+
+      // --- FUNGSI STAGGERED REVEAL ANIMATION (Mewah & Terasa) ---
+      function initGalleryReveal() {
+        let delay = 0;
+        let timeoutId;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (
+                entry.isIntersecting &&
+                !entry.target.classList.contains("show")
+              ) {
+                // Memberikan delay bertahap untuk efek air terjun / domino
+                setTimeout(() => {
+                  entry.target.classList.add("show");
+                }, delay);
+
+                delay += 100; // Tambah delay untuk item berikutnya
+                observer.unobserve(entry.target);
+
+                // Reset delay jika scroll berhenti sebentar
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                  delay = 0;
+                }, 150);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document.querySelectorAll(".gallery-item").forEach((el) => {
+          observer.observe(el);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#b26632" />
+    <title>Membership Berhasil — Mahalu Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#b26632",
+              dark: "#893e1e",
+              muted: "#907e70",
+              ink: "#3b2a23",
+            },
+            fontFamily: {
+              head: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        background: #fff4ed;
+        color: #3b2a23;
+        font-family: Inter, sans-serif;
+      }
+      .font-head {
+        font-family: "Playfair Display", serif;
+      }
+      .is-hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="min-h-screen px-4 py-10 sm:px-6 sm:py-16">
+      <div class="mx-auto w-full max-w-2xl">
+        <header class="mb-7 text-center">
+          <div
+            class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-700"
+          >
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m5 12 4 4L19 6" />
+            </svg>
+          </div>
+          <p
+            class="mb-2 text-[10px] font-bold uppercase tracking-[.16em] text-accent"
+          >
+            Mahalu Membership
+          </p>
+          <h1 id="page-title" class="font-head text-3xl text-ink sm:text-4xl">
+            Pembayaran Membership
+          </h1>
+          <p
+            id="page-description"
+            class="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted sm:text-[15px]"
+          >
+            Masukkan nomor WhatsApp yang dipakai saat membeli untuk melihat
+            status pembayaran dan rincian kuota membership.
+          </p>
+        </header>
+
+        <section
+          class="rounded-2xl border border-[#b26632]/20 bg-white p-5 shadow-[0_18px_50px_rgba(43,28,20,.07)] sm:p-7"
+        >
+          <div
+            id="reference-row"
+            class="is-hidden mb-5 rounded-xl bg-[#fff8f2] px-4 py-3"
+          >
+            <p
+              class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+            >
+              Referensi pembayaran
+            </p>
+            <p
+              id="reference-value"
+              class="mt-1 break-all text-sm font-semibold text-accent"
+            ></p>
+          </div>
+
+          <form id="verify-form" class="space-y-2">
+            <label for="phone" class="block text-xs font-semibold text-ink"
+              >Nomor WhatsApp pembelian</label
+            >
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                required
+                placeholder="Contoh: 0812…"
+                class="min-w-0 flex-1 rounded-xl border border-[#e6d8ce] px-4 py-3 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/10"
+              />
+              <button
+                id="verify-button"
+                type="submit"
+                class="rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-dark disabled:opacity-50"
+              >
+                Periksa status
+              </button>
+            </div>
+            <p class="text-[11px] leading-relaxed text-muted">
+              Nomor dipakai untuk mencocokkan pembelian dan tidak dikirim lewat
+              alamat halaman.
+            </p>
+          </form>
+
+          <div
+            id="feedback"
+            class="is-hidden mt-4 rounded-xl border px-4 py-3 text-sm"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+          <div
+            id="membership-summary"
+            class="is-hidden mt-6 border-t border-[#f0e7e0] pt-5"
+          >
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+                >
+                  Atas nama
+                </p>
+                <p
+                  id="customer-name"
+                  class="mt-1 text-sm font-semibold text-ink"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+                >
+                  Paket
+                </p>
+                <p
+                  id="package-name"
+                  class="mt-1 text-sm font-semibold text-ink"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+                >
+                  Dibayar
+                </p>
+                <p
+                  id="package-price"
+                  class="mt-1 text-sm font-semibold text-ink"
+                ></p>
+              </div>
+              <div>
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+                >
+                  Status membership
+                </p>
+                <p
+                  id="membership-status"
+                  class="mt-1 text-sm font-semibold text-ink"
+                ></p>
+              </div>
+              <div class="sm:col-span-2">
+                <p
+                  class="text-[10px] font-bold uppercase tracking-[.12em] text-muted"
+                >
+                  Masa berlaku
+                </p>
+                <p
+                  id="validity"
+                  class="mt-1 text-sm font-semibold text-ink"
+                ></p>
+              </div>
+            </div>
+
+            <div class="mt-6 border-t border-[#f0e7e0] pt-5">
+              <div class="mb-3">
+                <h2 class="text-sm font-bold text-ink">Benefit membership</h2>
+                <p class="mt-1 text-xs leading-relaxed text-muted">
+                  Setiap kuota berlaku sesuai cakupan yang tertulis di bawah.
+                </p>
+              </div>
+              <ul id="benefit-list" class="space-y-2"></ul>
+            </div>
+
+            <a
+              id="retry-payment"
+              class="is-hidden mt-5 flex w-full items-center justify-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-dark"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lanjutkan pembayaran</a
+            >
+          </div>
+        </section>
+
+        <footer
+          class="mt-5 flex flex-col items-center gap-3 text-sm sm:flex-row sm:justify-center"
+        >
+          <a href="/" class="font-semibold text-accent hover:text-dark"
+            >Kembali ke Beranda</a
+          >
+          <span class="hidden text-muted sm:inline">·</span>
+          <a
+            href="/#"
+            data-mahalu-booking
+            class="font-semibold text-accent hover:text-dark"
+            >Booking layanan</a
+          >
+        </footer>
+      </div>
+    </main>
+
+    <script>
+      window.MAHALU_BOOKING_CONFIG = window.MAHALU_BOOKING_CONFIG || {
+        apiBase: "https://ads.langitlangit.id/backend/api",
+      };
+      (function () {
+        var apiBase = (
+          window.MAHALU_BOOKING_CONFIG.apiBase ||
+          "https://bms-api.mahalu.group/api"
+        ).replace(/\/$/, "");
+        var referenceId =
+          new URLSearchParams(window.location.search).get("payment_ref") || "";
+        var form = document.getElementById("verify-form");
+        var phoneInput = document.getElementById("phone");
+        var button = document.getElementById("verify-button");
+        var feedback = document.getElementById("feedback");
+        var summary = document.getElementById("membership-summary");
+
+        function idr(value) {
+          return "Rp\u00a0" + Number(value || 0).toLocaleString("id-ID");
+        }
+        function formatDate(value) {
+          if (!value) return "Belum ditentukan";
+          var date = new Date(value + "T00:00:00");
+          return isNaN(date.getTime())
+            ? value
+            : date.toLocaleDateString("id-ID", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              });
+        }
+        function showFeedback(message, type) {
+          feedback.textContent = message;
+          feedback.className =
+            "mt-4 rounded-xl border px-4 py-3 text-sm " +
+            (type === "success"
+              ? "border-green-200 bg-green-50 text-green-800"
+              : type === "pending"
+                ? "border-[#ead7c8] bg-[#fff8f2] text-[#74451f]"
+                : "border-red-200 bg-red-50 text-red-700");
+          feedback.classList.remove("is-hidden");
+        }
+        function benefitLabel(benefit) {
+          var target = benefit.target || "Layanan";
+          var quota = Number(benefit.quota || 0);
+          if (benefit.scope === "category")
+            return quota + "x layanan dalam kategori " + target;
+          if (benefit.scope === "service")
+            return quota + "x varian layanan pada service " + target;
+          return quota + "x " + target;
+        }
+        function renderBenefits(benefits) {
+          var list = document.getElementById("benefit-list");
+          list.replaceChildren();
+          (benefits || []).forEach(function (benefit) {
+            var row = document.createElement("li");
+            row.className =
+              "flex flex-col gap-2 rounded-xl border border-[#eee3dc] bg-[#fffaf6] p-4 sm:flex-row sm:items-center sm:justify-between";
+
+            var content = document.createElement("div");
+            content.className = "min-w-0";
+            var title = document.createElement("p");
+            title.className = "text-sm font-semibold leading-snug text-ink";
+            title.textContent = benefitLabel(benefit);
+            var used = Number(benefit.used || 0);
+            var quota = Number(benefit.quota || 0);
+            var note = document.createElement("p");
+            note.className = "mt-1 text-xs text-muted";
+            note.textContent = "Total " + quota + " kuota · Terpakai " + used;
+
+            var remaining = document.createElement("span");
+            remaining.className =
+              "shrink-0 self-start rounded-full bg-green-50 px-3 py-1 text-xs font-bold text-green-800 sm:self-auto";
+            remaining.textContent = Number(benefit.remaining || 0) + " tersisa";
+            content.append(title, note);
+            row.append(content, remaining);
+            list.appendChild(row);
+          });
+        }
+        function verifyStatus() {
+          if (!referenceId) {
+            showFeedback(
+              "Referensi pembayaran tidak ditemukan. Buka kembali tautan dari payment gateway.",
+              "error",
+            );
+            return;
+          }
+          button.disabled = true;
+          button.textContent = "Memeriksa…";
+          fetch(
+            apiBase +
+              "/public/membership-payments/" +
+              encodeURIComponent(referenceId) +
+              "/status",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "ngrok-skip-browser-warning": "true",
+              },
+              body: JSON.stringify({ phone: phoneInput.value.trim() }),
+            },
+          )
+            .then(function (response) {
+              return response.json().then(function (body) {
+                if (!response.ok)
+                  throw new Error(
+                    body.message || "Data membership tidak dapat diverifikasi.",
+                  );
+                return body;
+              });
+            })
+            .then(function (response) {
+              var data = response.data || {};
+              var payment = data.payment || {};
+              var member = data.membership || {};
+              var packageData = data.package || {};
+              document
+                .getElementById("reference-row")
+                .classList.remove("is-hidden");
+              document.getElementById("reference-value").textContent =
+                data.reference_id || referenceId;
+              document.getElementById("customer-name").textContent =
+                (data.customer && data.customer.name) || "Customer";
+              document.getElementById("package-name").textContent =
+                packageData.name || "Membership";
+              document.getElementById("package-price").textContent = idr(
+                payment.amount || packageData.price,
+              );
+              document.getElementById("membership-status").textContent =
+                payment.paid
+                  ? member.status === "active"
+                    ? "Aktif"
+                    : member.status || "Lunas"
+                  : "Menunggu pembayaran";
+              document.getElementById("validity").textContent =
+                formatDate(member.start_date) +
+                " - " +
+                formatDate(member.end_date);
+              renderBenefits(packageData.benefits);
+              summary.classList.remove("is-hidden");
+
+              if (payment.paid) {
+                document.getElementById("page-title").textContent =
+                  "Membership Berhasil";
+                document.getElementById("page-description").textContent =
+                  "Pembayaran diterima. Berikut rincian kuota membership Anda.";
+                showFeedback("Pembayaran berhasil dikonfirmasi.", "success");
+                document
+                  .getElementById("retry-payment")
+                  .classList.add("is-hidden");
+              } else if (data.payment_url) {
+                showFeedback(
+                  "Pembayaran masih menunggu. Membership bisa dipakai setelah pembayaran diterima.",
+                  "pending",
+                );
+                var retry = document.getElementById("retry-payment");
+                retry.href = data.payment_url;
+                retry.classList.remove("is-hidden");
+              } else {
+                showFeedback(
+                  "Pembayaran belum terkonfirmasi. Hubungi kami jika status belum berubah.",
+                  "pending",
+                );
+                document
+                  .getElementById("retry-payment")
+                  .classList.add("is-hidden");
+              }
+              button.disabled = false;
+              button.textContent = "Periksa lagi";
+            })
+            .catch(function (error) {
+              showFeedback(
+                error.message ||
+                  "Status belum dapat dimuat. Periksa nomor WhatsApp lalu coba lagi.",
+                "error",
+              );
+              button.disabled = false;
+              button.textContent = "Coba lagi";
+            });
+        }
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          verifyStatus();
+        });
+        if (!referenceId)
+          showFeedback(
+            "Kode referensi tidak ada pada halaman ini. Silakan buka tautan return dari payment gateway.",
+            "error",
+          );
+      })();
+    </script>
+    <script src="/booking-widget.js"></script>
+  </body>
+</html>

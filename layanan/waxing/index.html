@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waxing Depok — Pencukuran Halus & Aman | Mahalu Spa</title>
+    <meta
+      name="description"
+      content="Waxing Depok dengan hasil mulus, aman, dan tahan lama 3-4 minggu. Cocok untuk semua jenis kulit. Produk premium hypoallergenic. Booking online mudah di Mahalu Spa."
+    />
+    <meta
+      name="keywords"
+      content="waxing depok, pencukuran depok, waxing aman, harga waxing, booking waxing"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://spa.mahalu.group/layanan/waxing/" />
+    <meta
+      property="og:title"
+      content="Waxing Depok — Pencukuran Halus & Profesional | Mahalu Spa"
+    />
+    <meta
+      property="og:description"
+      content="Waxing profesional dengan produk premium dan terapis berpengalaman. Hasil mulus hingga 4 minggu. Booking online sekarang."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://spa.mahalu.group/layanan/waxing/"
+    />
+    <meta
+      property="og:image"
+      content="https://spa.mahalu.group/assets/logo/og-image.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://spa.mahalu.group/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Layanan",
+            "item": "https://spa.mahalu.group/layanan/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Waxing",
+            "item": "https://spa.mahalu.group/layanan/waxing/"
+          }
+        ]
+      }
+    </script>
+    <!-- Structured Data: Service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Waxing",
+        "description": "Layanan waxing profesional untuk penghilangan rambut halus yang aman dan tahan lama",
+        "provider": {
+          "@type": "HealthAndBeautyBusiness",
+          "name": "Mahalu Spa, Nail Art & Eyelash",
+          "url": "https://spa.mahalu.group"
+        },
+        "areaServed": { "@type": "City", "name": "Depok" }
+      }
+    </script>
+    <!-- Structured Data: FAQPage — BARU, WAJIB match persis dengan <details> di bawah -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apakah waxing menyakitkan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Waxing sedikit menyakitkan di awal, tapi rasa cepat hilang. Seiring waktu, Anda akan terbiasa. Produk premium kami meminimalkan rasa sakit dan iritasi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah waxing aman untuk kulit sensitif?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, kami menggunakan wax hypoallergenic dan produk premium. Tapi pastikan beri tahu terapis jika kulit Anda sangat sensitif agar kami bisa menyesuaikan teknik."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa lama hasil waxing bertahan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rata-rata 3-4 minggu tergantung pertumbuhan rambut individu dan perawatan setelah waxing. Makin sering di-wax, hasil akan makin halus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana merawat kulit setelah waxing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hindari air panas 24 jam, jangan gosok area yang di-wax, gunakan lotion hypoallergenic, dan hindari aktivitas berat yang menyebabkan keringat berlebihan."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+      ::selection {
+        background-color: var(--accent);
+        color: #fff;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .img-zoom {
+        transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .group:hover .img-zoom {
+        transform: scale(1.06);
+      }
+      .menu-item {
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .menu-item:hover {
+        transform: translateX(6px);
+      }
+      .menu-item:hover .menu-title {
+        color: var(--accent);
+        font-weight: 500;
+      }
+      .skeleton {
+        background: linear-gradient(
+          90deg,
+          rgba(178, 102, 50, 0.08) 25%,
+          rgba(178, 102, 50, 0.15) 37%,
+          rgba(178, 102, 50, 0.08) 63%
+        );
+        background-size: 400% 100%;
+        animation: skeleton-loading 1.4s ease infinite;
+      }
+      @keyframes skeleton-loading {
+        0% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-bg">
+    <div id="header-container"></div>
+
+    <main class="w-full">
+      <!-- HERO -->
+      <section
+        class="relative w-full h-[42vh] min-h-[380px] flex items-center justify-center overflow-hidden"
+      >
+        <img
+          src="/assets/img/waxing.jpg"
+          alt="Waxing Mahalu Spa Depok"
+          class="absolute inset-0 w-full h-full object-cover img-zoom origin-center opacity-90"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2000&auto=format&fit=crop'
+          "
+        />
+        <div class="absolute inset-0 bg-black/25 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent"
+        ></div>
+
+        <div
+          class="relative z-10 w-full max-w-[900px] mx-auto px-6 text-center pt-14 reveal active"
+        >
+          <nav
+            aria-label="Breadcrumb"
+            class="mb-5 text-xs md:text-sm font-body text-white/70"
+          >
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <span class="mx-2" aria-hidden="true">/</span>
+            <a href="/layanan/" class="hover:text-white transition-colors"
+              >Layanan</a
+            >
+            <span class="mx-2" aria-hidden="true">/</span>
+            <span class="text-white/90">Waxing</span>
+          </nav>
+          <span
+            class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm flex items-center justify-center gap-4 mb-5"
+          >
+            <span class="w-8 h-[1px] bg-accent"></span> Treatment
+            <span class="w-8 h-[1px] bg-accent"></span>
+          </span>
+          <h1
+            class="font-head text-4xl md:text-6xl text-bg leading-[1.1] drop-shadow-lg mb-4"
+          >
+            Waxing Depok
+          </h1>
+          <p
+            class="font-body text-[#fff4ed]/80 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed"
+          >
+            Pencukuran halus yang aman, nyaman, dan hasil mulus hingga 3-4
+            minggu dengan produk premium pilihan.
+          </p>
+        </div>
+      </section>
+
+      <div class="max-w-[1000px] mx-auto px-6 md:px-12">
+        <!-- ABOUT -->
+        <section class="pt-14 md:pt-20 pb-4 reveal">
+          <h2 class="font-head text-3xl text-text mb-6">
+            Tentang Layanan Waxing Kami
+          </h2>
+          <div
+            class="font-body text-text/80 leading-relaxed space-y-4 text-base md:text-lg max-w-[760px]"
+          >
+            <p>
+              Waxing adalah metode penghilangan rambut yang efektif dan tahan
+              lama dengan hasil kulit yang halus dan mulus. Layanan waxing
+              Mahalu Spa menggunakan produk premium berkualitas tinggi yang aman
+              untuk semua jenis kulit.
+            </p>
+            <p>
+              Dengan teknik profesional dan hygienis yang ketat, kami memastikan
+              pengalaman waxing Anda nyaman dan hasil yang memuaskan. Rambut
+              tidak akan tumbuh selama 3-4 minggu, dan saat tumbuh kembali,
+              teksturnya lebih lembut dibanding sebelumnya.
+            </p>
+            <p>
+              Kami menawarkan berbagai pilihan area waxing mulai dari legs,
+              underarms, bikini area, hingga facial waxing. Setiap prosedur
+              disesuaikan dengan kebutuhan dan sensitivitas kulit Anda.
+            </p>
+          </div>
+        </section>
+
+        <!-- BENEFITS — grid kartu -->
+        <section class="py-14 md:py-20 reveal">
+          <h2 class="font-head text-3xl text-text mb-8">Manfaat Waxing</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white/60 border border-muted/15 rounded-2xl p-6">
+              <span class="text-accent text-2xl">✓</span>
+              <p class="font-body font-semibold text-text mt-2 mb-1">
+                Hasil Tahan Lama
+              </p>
+              <p class="font-body text-sm text-text/70">
+                Rambut tidak tumbuh selama 3-4 minggu, lebih lama dari cukur.
+              </p>
+            </div>
+            <div class="bg-white/60 border border-muted/15 rounded-2xl p-6">
+              <span class="text-accent text-2xl">✓</span>
+              <p class="font-body font-semibold text-text mt-2 mb-1">
+                Kulit Halus & Mulus
+              </p>
+              <p class="font-body text-sm text-text/70">
+                Hasil waxing lebih halus karena mencabut dari akar.
+              </p>
+            </div>
+            <div class="bg-white/60 border border-muted/15 rounded-2xl p-6">
+              <span class="text-accent text-2xl">✓</span>
+              <p class="font-body font-semibold text-text mt-2 mb-1">
+                Rambut Lebih Lembut
+              </p>
+              <p class="font-body text-sm text-text/70">
+                Saat tumbuh kembali, rambut lebih halus dan tidak kaku.
+              </p>
+            </div>
+            <div class="bg-white/60 border border-muted/15 rounded-2xl p-6">
+              <span class="text-accent text-2xl">✓</span>
+              <p class="font-body font-semibold text-text mt-2 mb-1">
+                Efisiensi Waktu
+              </p>
+              <p class="font-body text-sm text-text/70">
+                Tidak perlu cukur berulang kali setiap hari.
+              </p>
+            </div>
+            <div
+              class="bg-white/60 border border-muted/15 rounded-2xl p-6 sm:col-span-2"
+            >
+              <span class="text-accent text-2xl">✓</span>
+              <p class="font-body font-semibold text-text mt-2 mb-1">
+                Cocok untuk Kulit Sensitif
+              </p>
+              <p class="font-body text-sm text-text/70">
+                Produk hypoallergenic kami aman untuk semua jenis kulit.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PILIH TREATMENT — fetch variant asli dari API, link ke service-detail.html -->
+        <section class="py-14 md:py-20 border-t border-muted/15 reveal">
+          <h2 class="font-head text-3xl text-text mb-2">Pilih Treatment</h2>
+          <p class="font-body text-text/70 mb-8">
+            Lihat harga & durasi lengkap per area, langsung booking treatment
+            yang kamu mau.
+          </p>
+
+          <div
+            id="treatment-loading"
+            class="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
+            <div class="skeleton h-14 rounded-xl"></div>
+            <div class="skeleton h-14 rounded-xl"></div>
+            <div class="skeleton h-14 rounded-xl"></div>
+            <div class="skeleton h-14 rounded-xl"></div>
+          </div>
+          <div id="treatment-empty" class="hidden font-body text-sm text-muted">
+            Daftar treatment sedang tidak bisa dimuat —
+            <a href="/services/" class="text-accent underline"
+              >lihat menu lengkap</a
+            >
+            atau
+            <a
+              href="https://wa.me/6289609095700"
+              target="_blank"
+              rel="noopener"
+              class="text-accent underline"
+              >tanya via WhatsApp</a
+            >.
+          </div>
+          <ul
+            id="treatment-list"
+            class="hidden grid grid-cols-1 sm:grid-cols-2 gap-3"
+          ></ul>
+        </section>
+
+        <!-- PROSES -->
+        <section class="py-14 md:py-20 border-t border-muted/15 reveal">
+          <h2 class="font-head text-3xl text-text mb-8">
+            Proses & Durasi Layanan
+          </h2>
+          <div
+            class="bg-accent/5 border border-accent/10 rounded-2xl p-6 md:p-8"
+          >
+            <ol class="space-y-6 font-body">
+              <li class="flex gap-4">
+                <span
+                  class="bg-accent text-bg w-8 h-8 rounded-full flex items-center justify-center font-semibold flex-shrink-0"
+                  >1</span
+                >
+                <div>
+                  <strong class="text-text"
+                    >Konsultasi & Patch Test (5-10 menit)</strong
+                  >
+                  <p class="text-text/70 text-sm mt-1">
+                    Diskusi area dan sensitivitas kulit, kemudian tes kecil
+                    untuk reaksi alergi.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="bg-accent text-bg w-8 h-8 rounded-full flex items-center justify-center font-semibold flex-shrink-0"
+                  >2</span
+                >
+                <div>
+                  <strong class="text-text">Persiapan Kulit (5 menit)</strong>
+                  <p class="text-text/70 text-sm mt-1">
+                    Pembersihan dan powder/oil agar wax melekat sempurna.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="bg-accent text-bg w-8 h-8 rounded-full flex items-center justify-center font-semibold flex-shrink-0"
+                  >3</span
+                >
+                <div>
+                  <strong class="text-text">Proses Waxing (15-45 menit)</strong>
+                  <p class="text-text/70 text-sm mt-1">
+                    Aplikasi wax hangat dan pencabutan rambut dari akar (durasi
+                    tergantung area).
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span
+                  class="bg-accent text-bg w-8 h-8 rounded-full flex items-center justify-center font-semibold flex-shrink-0"
+                  >4</span
+                >
+                <div>
+                  <strong class="text-text"
+                    >Finishing & Aftercare (10 menit)</strong
+                  >
+                  <p class="text-text/70 text-sm mt-1">
+                    Aplikasi lotion penenang dan edukasi perawatan kulit setelah
+                    waxing.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <p class="mt-6 text-sm text-text/60 font-body italic">
+              <strong>Total Durasi:</strong> 30-60 menit (tergantung area yang
+              di-wax)
+            </p>
+          </div>
+        </section>
+
+        <!-- FAQ — teks WAJIB match persis dengan FAQPage schema di head -->
+        <section class="py-14 md:py-20 border-t border-muted/15 reveal">
+          <h2 class="font-head text-3xl text-text mb-8">
+            Pertanyaan Umum (FAQ)
+          </h2>
+          <div class="space-y-3">
+            <details
+              class="bg-white/60 border border-muted/15 rounded-xl p-5 md:p-6 cursor-pointer group"
+            >
+              <summary
+                class="font-body font-semibold text-text flex justify-between items-center gap-4"
+              >
+                Apakah waxing menyakitkan?
+                <span
+                  class="text-accent group-open:rotate-180 transition-transform flex-shrink-0"
+                  >▼</span
+                >
+              </summary>
+              <p class="text-text/70 mt-4 text-sm leading-relaxed">
+                Waxing sedikit menyakitkan di awal, tapi rasa cepat hilang.
+                Seiring waktu, Anda akan terbiasa. Produk premium kami
+                meminimalkan rasa sakit dan iritasi.
+              </p>
+            </details>
+            <details
+              class="bg-white/60 border border-muted/15 rounded-xl p-5 md:p-6 cursor-pointer group"
+            >
+              <summary
+                class="font-body font-semibold text-text flex justify-between items-center gap-4"
+              >
+                Apakah waxing aman untuk kulit sensitif?
+                <span
+                  class="text-accent group-open:rotate-180 transition-transform flex-shrink-0"
+                  >▼</span
+                >
+              </summary>
+              <p class="text-text/70 mt-4 text-sm leading-relaxed">
+                Ya, kami menggunakan wax hypoallergenic dan produk premium. Tapi
+                pastikan beri tahu terapis jika kulit Anda sangat sensitif agar
+                kami bisa menyesuaikan teknik.
+              </p>
+            </details>
+            <details
+              class="bg-white/60 border border-muted/15 rounded-xl p-5 md:p-6 cursor-pointer group"
+            >
+              <summary
+                class="font-body font-semibold text-text flex justify-between items-center gap-4"
+              >
+                Berapa lama hasil waxing bertahan?
+                <span
+                  class="text-accent group-open:rotate-180 transition-transform flex-shrink-0"
+                  >▼</span
+                >
+              </summary>
+              <p class="text-text/70 mt-4 text-sm leading-relaxed">
+                Rata-rata 3-4 minggu tergantung pertumbuhan rambut individu dan
+                perawatan setelah waxing. Makin sering di-wax, hasil akan makin
+                halus.
+              </p>
+            </details>
+            <details
+              class="bg-white/60 border border-muted/15 rounded-xl p-5 md:p-6 cursor-pointer group"
+            >
+              <summary
+                class="font-body font-semibold text-text flex justify-between items-center gap-4"
+              >
+                Bagaimana merawat kulit setelah waxing?
+                <span
+                  class="text-accent group-open:rotate-180 transition-transform flex-shrink-0"
+                  >▼</span
+                >
+              </summary>
+              <p class="text-text/70 mt-4 text-sm leading-relaxed">
+                Hindari air panas 24 jam, jangan gosok area yang di-wax, gunakan
+                lotion hypoallergenic, dan hindari aktivitas berat yang
+                menyebabkan keringat berlebihan.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <!-- LAYANAN TERKAIT -->
+        <section class="py-14 md:py-20 border-t border-muted/15 reveal">
+          <h2 class="font-head text-3xl text-text mb-6">Layanan Terkait</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="/layanan/facial-treatment/"
+              class="p-5 bg-white/60 border border-muted/15 rounded-xl hover:border-accent hover:shadow-md transition-all"
+            >
+              <span
+                class="font-body font-semibold text-accent text-xs uppercase tracking-wide block mb-2"
+                >Layanan Lainnya</span
+              >
+              <span class="font-head text-lg text-text">Facial Treatment</span>
+            </a>
+            <a
+              href="/layanan/spa-dan-massage/"
+              class="p-5 bg-white/60 border border-muted/15 rounded-xl hover:border-accent hover:shadow-md transition-all"
+            >
+              <span
+                class="font-body font-semibold text-accent text-xs uppercase tracking-wide block mb-2"
+                >Layanan Lainnya</span
+              >
+              <span class="font-head text-lg text-text">Spa & Massage</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="pb-16 md:pb-24 reveal">
+          <div
+            class="text-center bg-accent/10 border border-accent/20 rounded-2xl p-8 md:p-10"
+          >
+            <h3 class="font-head text-2xl text-text mb-3">
+              Siap Untuk Kulit Halus & Mulus?
+            </h3>
+            <p class="font-body text-text/75 mb-6">
+              Lihat harga terkini & booking mudah online. Atau hubungi kami via
+              WhatsApp untuk konsultasi gratis.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="#treatment-list"
+                class="w-full sm:w-auto inline-block bg-accent text-bg px-8 py-3.5 rounded-full font-semibold hover:bg-dark transition-colors text-center"
+                >Pilih Treatment</a
+              >
+              <a
+                href="https://wa.me/6289609095700"
+                target="_blank"
+                rel="noopener"
+                class="w-full sm:w-auto inline-block border border-accent text-accent px-8 py-3.5 rounded-full font-semibold hover:bg-accent hover:text-bg transition-colors text-center"
+                >Tanya via WhatsApp</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+    <script>
+      window.MAHALU_BOOKING_CONFIG = {
+        apiBase: "https://ads.langitlangit.id/backend/api",
+      };
+    </script>
+    <script src="/booking-widget.js?v=2"></script>
+
+    <script>
+      // Treatment picker — sama seperti /layanan/spa-dan-massage/, ganti
+      // kata kunci pencocokan servicenya ke "wax".
+      const CATALOG_ENDPOINT =
+        "https://ads.langitlangit.id/backend/api/public/products";
+      const MATCH_SERVICE_NAMES = ["wax"];
+
+      const formatRupiah = (n) =>
+        new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        })
+          .format(Number(n || 0))
+          .replace("Rp", "Rp ");
+
+      function escapeHtml(v) {
+        return String(v ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      async function loadTreatments() {
+        try {
+          const res = await fetch(CATALOG_ENDPOINT);
+          const payload = await res.json();
+          if (!payload.status || !Array.isArray(payload.data))
+            throw new Error("Invalid payload");
+
+          const variants = payload.data
+            .flatMap((cat) => cat.services || [])
+            .filter((svc) =>
+              MATCH_SERVICE_NAMES.some((m) =>
+                svc.name.toLowerCase().includes(m),
+              ),
+            )
+            .flatMap((svc) => svc.variants || []);
+
+          document.getElementById("treatment-loading").classList.add("hidden");
+
+          if (!variants.length) {
+            document
+              .getElementById("treatment-empty")
+              .classList.remove("hidden");
+            return;
+          }
+
+          const listEl = document.getElementById("treatment-list");
+          listEl.innerHTML = variants
+            .map((v) => {
+              const url = `/services/service-detail.html?product=${encodeURIComponent(v.name)}`;
+              return `
+                <li>
+                  <a href="${url}" class="menu-item flex items-center justify-between gap-3 bg-white/60 border border-muted/15 rounded-xl px-5 py-4 hover:border-accent transition-colors">
+                    <span>
+                      <span class="menu-title font-body text-text block transition-colors">${escapeHtml(v.name)}</span>
+                      <span class="text-xs text-muted">${v.duration_minutes ? v.duration_minutes + " menit" : ""}</span>
+                    </span>
+                    <span class="font-body font-medium text-accent whitespace-nowrap">${formatRupiah(v.final_price ?? v.retail_price)}</span>
+                  </a>
+                </li>`;
+            })
+            .join("");
+          listEl.classList.remove("hidden");
+        } catch (error) {
+          console.error("Gagal memuat daftar treatment:", error);
+          document.getElementById("treatment-loading").classList.add("hidden");
+          document.getElementById("treatment-empty").classList.remove("hidden");
+        }
+      }
+
+      function initScrollReveal() {
+        const observer = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("active");
+                observer.unobserve(e.target);
+              }
+            }),
+          { threshold: 0.12 },
+        );
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initScrollReveal();
+        loadTreatments();
+      });
+    </script>
+  </body>
+</html>

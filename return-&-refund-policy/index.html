@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Mahalu Spa & Wellness</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff4ed;
+        --accent: #b26632;
+        --muted: #907e70;
+        --dark: #893e1e;
+        --text: #3b2a23;
+        --font-head: "Playfair Display", serif;
+        --font-subhead: "Lora", serif;
+        --font-body: "Inter", sans-serif;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+      }
+
+      /* Legal Content Styling */
+      .legal-content h2 {
+        font-family: var(--font-head);
+        font-size: 1.875rem; /* 30px */
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text);
+      }
+      .legal-content h3 {
+        font-family: var(--font-head);
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark);
+      }
+      .legal-content p,
+      .legal-content ul {
+        font-family: var(--font-body);
+        font-weight: 300;
+        line-height: 1.8;
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+      }
+      .legal-content ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
+      .legal-content a {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              accent: "var(--accent)",
+              muted: "var(--muted)",
+              dark: "var(--dark)",
+              text: "var(--text)",
+            },
+            fontFamily: {
+              head: "var(--font-head)",
+              subhead: "var(--font-subhead)",
+              body: "var(--font-body)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-bg relative flex flex-col min-h-screen">
+    <div id="header-container"></div>
+
+    <main class="w-full flex-grow pt-32 pb-24 md:pt-40 md:pb-32 px-6 md:px-12">
+      <div class="max-w-3xl mx-auto">
+        <div
+          class="mb-12 border-b border-muted/20 pb-8 text-center md:text-left"
+        >
+          <span
+            class="font-subhead italic text-accent tracking-[0.15em] uppercase text-sm mb-4 block"
+          >
+            Legal & Policy
+          </span>
+          <h1 class="font-head text-4xl md:text-5xl lg:text-6xl text-text">
+            Return & Refund Policy
+          </h1>
+          <p class="font-body text-muted mt-4 text-sm">
+            Terakhir diperbarui: 15 Mei 2026
+          </p>
+        </div>
+
+        <article class="legal-content text-justify md:text-left">
+          <p>
+            Di Mahalu Spa & Wellness, kami berkomitmen untuk memberikan layanan
+            terbaik. Mengingat sifat industri <em>hospitality</em> dan layanan
+            personal, berikut adalah kebijakan kami mengenai pengembalian dana
+            dan layanan.
+          </p>
+
+          <h2>1. Layanan Perawatan (Spa, Nails, Eyelash, Waxing)</h2>
+          <p>
+            Semua layanan perawatan yang telah diselesaikan
+            <strong>tidak dapat di-refund</strong> (dikembalikan dananya). Jika
+            Anda merasa kurang puas dengan layanan kami selama sesi berlangsung,
+            mohon segera komunikasikan kepada terapis atau manajer kami agar
+            kami dapat langsung menyesuaikan tekanan, produk, atau kenyamanan
+            Anda.
+          </p>
+
+          <h2>2. Pembatalan & Penjadwalan Ulang (Reschedule)</h2>
+          <p>
+            Kami memahami bahwa jadwal bisa berubah. Jika Anda perlu membatalkan
+            atau mengubah jadwal, mohon informasikan kepada kami
+            selambat-lambatnya <strong>12 jam</strong> sebelum waktu perawatan
+            Anda.
+          </p>
+          <ul>
+            <li>
+              Pembatalan mendadak (kurang dari 12 jam) atau
+              <em>No-Show</em> (tidak hadir) akan mengakibatkan hangusnya
+              deposit atau dikenakan biaya pembatalan pada kunjungan berikutnya.
+            </li>
+          </ul>
+
+          <h2>3. Produk Ritel & Skincare</h2>
+          <p>
+            Jika kami menjual produk fisik, produk yang sudah dibeli tidak dapat
+            dikembalikan atau ditukar, kecuali produk terbukti cacat produksi
+            atau kedaluwarsa saat diterima. Klaim harus dilakukan dalam waktu
+            maksimal 3 (tiga) hari sejak pembelian dengan menyertakan struk
+            asli.
+          </p>
+
+          <h2>4. Keterlambatan</h2>
+          <p>
+            Mohon tiba 10-15 menit sebelum sesi Anda. Keterlambatan Anda akan
+            memotong total durasi perawatan Anda agar tidak mengganggu jadwal
+            tamu berikutnya, dan tarif layanan tetap dikenakan secara penuh.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="/components/header.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/components/seo/LocalBusinessSchema.js"></script>
+  </body>
+</html>
